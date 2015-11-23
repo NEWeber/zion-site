@@ -1,0 +1,18 @@
+.staff-profile {
+    display: block;
+    background: #9d2a00
+    ;
+}
+
+.staff-profile h2 {
+    float: left;
+}
+
+.staff-profile p {
+    float: left;
+}
+
+.staff-profile img {
+    float: left;
+    display: inline;
+}
