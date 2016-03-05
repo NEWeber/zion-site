@@ -1,7 +1,7 @@
 body {
-    background: #eb4000;
+    background: #587272;
     /*rgb(161, 201, 0);*/
-    padding: 15px;
+    padding: 25px;
 }
 
 a {
@@ -9,12 +9,15 @@ a {
 }
 
 .header-wrap {
-    background: #9d2a00;
+    max-width: 1070px;
+    background: #9aaaaa;
     padding-top: 20px;
     padding-right: 40px;
     padding-left: 40px;
     padding-bottom: 20px;
-    color: #d6d6d6;
+    color: #ffffff;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .header-wrap h1 {
@@ -30,10 +33,10 @@ a {
 .header-wrap .header-service-times {
     float: right;
     width: 200px;
-    background-color: #eb4000;
+    background-color: #587272;
     padding: 20px;
     border-radius: 10px;
-    color: black;
+    color: #ffffff;
 }
 
 .clearfix:after {
@@ -43,9 +46,12 @@ a {
 }
 
 .menu-wrap {
+    max-width: 1150px;
     width: 100%;
     box-shadow: 0 1px 3px rgba(0,0,0,0.2);
     background: #3e3436;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .menu {
@@ -61,18 +67,18 @@ a {
 
 .menu a {
     transition: all linear 0.15s;
-    color: #d6d6d6;
+    color: #9aaaaa;
 }
 
 .menu li:hover > a, .menu .current-item > a {
     /*Why does this work to select both the top level and the lower level and not all links on lower level?*/
     text-decoration: none;
-    color: #eb4000;
+    color: #ffffff;
 }
 
 ul .service-times {
     text-decoration:none;
-    color:#d6d6d6;
+    color:#ffffff;
     padding:10px 40px;
     display:inline-block;
     font-size: 100%;
@@ -134,7 +140,45 @@ ul .service-times {
     background: #3e3436;
 }
 
+.content-wrapper {
+    max-width: 1050px;
+    height: 575px;
+    width: auto;
+    display: block;
+    position: relative;
+    padding: 50px;
+    box-shadow: 0px -2px 2px #587272;
+    color: #ffffff;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.content-wrapper::after {
+    content: "";
+    background-image: url( "../img/zion-front.jpg" );
+    background-size: contain;
+    background-repeat: no-repeat;
+    /*background-position: center;*/
+    opacity: .4;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left:0 ;
+    position: absolute;
+    z-index: -1;
+}
+
+.content-wrapper p {
+    font-size: 18px;
+}
+
 .content-wrapper img {
     float: left;
     margin: 25px;
+}
+
+.scroll-wrapper {
+    height: 625px;
+    overflow: auto;
+    width: auto;
 }

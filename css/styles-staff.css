@@ -1,18 +1,19 @@
 .staff-profile {
     display: block;
-    background: #9d2a00
-    ;
+    background: rgba(154,170,170, .85);
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 10px;
 }
 
 .staff-profile h2 {
-    float: left;
 }
 
 .staff-profile p {
-    float: left;
 }
 
 .staff-profile img {
     float: left;
-    display: inline;
+    background: rgba(154,170,170, 1);
+
 }
