@@ -155,7 +155,7 @@ ul .service-times {
 
 .content-wrapper::after {
     content: "";
-    background-image: url( "../img/zion-front.jpg" );
+    background-image: url( "../img/new-zion-street.jpg" );
     background-size: contain;
     background-repeat: no-repeat;
     /*background-position: center;*/
@@ -169,16 +169,54 @@ ul .service-times {
 }
 
 .content-wrapper p {
+    position:relative;
     font-size: 18px;
 }
 
-.content-wrapper img {
+/*.content-wrapper img {
     float: left;
     margin: 25px;
-}
+}*/
 
 .scroll-wrapper {
     height: 625px;
     overflow: auto;
     width: auto;
+}
+
+.side-image {
+    width:500px;
+    float:right;
+}
+
+.side-image-2 {
+    clear:right;
+}
+
+.side-image img {
+    max-width:100%;
+    max-height:100%;
+}
+
+.h2-not-bold {
+    font-weight: normal;
+    font-size: 70%;
+}
+
+.strong {
+    font-weight: bold;
+}
+
+.u {
+    text-decoration: underline;
+}
+
+.em {
+    font-style: italic;
+}
+
+
+h4.catechism-quesions{
+    font-weight: normal;
+    font-style: italic;
 }
