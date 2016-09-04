@@ -158,8 +158,8 @@ ul .service-times {
     background-image: url( "../img/new-zion-street.jpg" );
     background-size: contain;
     background-repeat: no-repeat;
-    /*background-position: center;*/
-    opacity: .4;
+    background-position: center;
+    opacity: 1;
     top: 0;
     right: 0;
     bottom: 0;
@@ -177,6 +177,11 @@ ul .service-times {
     float: left;
     margin: 25px;
 }*/
+
+.homepage p {
+    position: relative;
+    top: 325px;
+}
 
 .scroll-wrapper {
     height: 625px;
