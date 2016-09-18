@@ -63,7 +63,7 @@ a {
 
 .content-wrapper::after {
     content: "";
-    background-image: url( "../img/new-zion-street.jpg" );
+    background-image: url( "../img/wide-no-name-zion-street.jpg" );
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center top;
@@ -74,6 +74,10 @@ a {
     left:0 ;
     position: absolute;
     z-index: -1;
+}
+
+.homepage.content-wrapper::after {
+    background-image: url( "../img/wide-new-zion-street.jpg" );
 }
 
 .content-wrapper p {
