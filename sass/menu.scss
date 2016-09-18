@@ -1,8 +1,10 @@
+@import "variables";
+
 .menu-wrap {
     max-width: 1150px;
     width: 100%;
     box-shadow: 0 1px 3px rgba(0,0,0,0.2);
-    background: #3e3436;
+    background: $complementary-neutral-dark;
     margin-left: auto;
     margin-right: auto;
 }
@@ -20,18 +22,19 @@
 
 .menu a {
     transition: all linear 0.15s;
-    color: #9aaaaa;
+    color: $primary-neutral-light;
 }
 
-.menu li:hover > a, .menu .current-item > a {
+.menu li:hover > a,
+.menu .current-item > a {
     /*Why does this work to select both the top level and the lower level and not all links on lower level?*/
     text-decoration: none;
-    color: hsl(0, 0%, 100%);
+    color: $white;
 }
 
 ul .service-times {
     text-decoration:none;
-    color: hsl(0, 0%, 100%);
+    color: $white;
     padding:10px 40px;
     display:inline-block;
     font-size: 100%;
@@ -52,11 +55,15 @@ ul .service-times {
 .menu > ul > li > a {
     padding: 10px 30px;
     display: inline-block;
-    text-shadow: 0 1px 0 rgba(0,0,0,0.4);
+    text-shadow: 0 1px 0 rgba($black, 0.4);
 }
 
-.menu > ul > li:hover > a, .menu > ul > .current-item > a {
-    background: #2e2728;
+.menu > ul > li:hover > a,
+.menu > ul > .current-item > a,
+.sub-menu li a:hover,
+.sub-menu .current-item a {
+    background: $complementary-neutral-light;
+    color: $primary-color;
 }
 
 .menu li:hover .sub-menu {
@@ -74,8 +81,8 @@ ul .service-times {
     z-index:-1;
     opacity: 0;
     transition: opacity linear 0.15s;
-    box-shadow: 0 2px 3px rgba(0,0,0,0.2);
-    background: #2e2728;
+    box-shadow: 0 2px 3px rgba(0,0,0,0.4);
+    background: $complementary-neutral-dark;
     display: none;
 }
 
@@ -87,8 +94,4 @@ ul .service-times {
 .sub-menu li a {
     padding: 10px 30px;
     display: block;
-}
-
-.sub-menu li a:hover, .sub-menu .current-item a {
-    background: #3e3436;
 }
