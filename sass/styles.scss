@@ -98,6 +98,12 @@ a {
 .text-container {
     background-color: rgba($primary-neutral-light, 0.8);
     padding: 1px 25px 1px 25px;
+    a {
+        color: $complementary-neutral;
+    }
+    a:hover {
+        color: $primary-color;
+    }
 }
 
 .scroll-wrapper {
