@@ -98,6 +98,10 @@ a {
 .text-container {
     background-color: rgba($primary-neutral-light, 0.8);
     padding: 1px 25px 1px 25px;
+    //TODO: Make text bigger, make container narrower, starting with below.
+    width:50em;
+    margin-right: auto;
+    margin-left: auto;
     a {
         color: $complementary-neutral;
     }
