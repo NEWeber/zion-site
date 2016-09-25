@@ -25,5 +25,11 @@ gulp.task( 'clean', function () {
      .pipe( sass().on( 'error', sass.logError ) )
      .pipe( gulp.dest( './target/css' ) );
  } );
+ 
+// checkout https://github.com/sindresorhus/gulp-imagemin for images
+ gulp.task( 'copy', function() {
+     gulp.src( './img/*' )
+     .pipe( gulp.dest( './target/img' ) );
+ } );
 
- gulp.task( 'default', [ 'clean', 'nunjucks', 'sass' ] );
+ gulp.task( 'default', [ 'clean', 'nunjucks', 'sass', 'copy' ] );
