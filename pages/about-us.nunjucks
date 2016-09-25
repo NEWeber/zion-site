@@ -1,0 +1,32 @@
+{% extends "layout.nunjucks" %}
+{% block content %}
+    {% include "partials/header.nunjucks" %}
+    {% include "partials/menu.nunjucks" %}
+    <div class="content-wrapper">
+        <div class="text-container">
+            <h1>Who We Are</h1>
+            <ul class="big-list">
+                <li>We are Zion
+                    <p>From the Hebrew word צִיוֹן (“Tsion”); a term used for the place where God meets His people in mercy and forgiveness</p>
+                </li>
+                <li>We are Evangelical
+                    <p>Focused on the Gospel, the Good News of Jesus Christ’s death for the forgiveness of our sins and His resurrection for our justification.  With Paul in Galatians 2, we have been crucified with Christ. It is no longer we who live, but Christ who lives in us. And the life we now live in the flesh we live by faith in the Son of God, who loved us and gave himself for us. (Galatians 2:20, paraphrased)</p>
+                </li>
+                <li>We are Lutheran
+                    <p>Continuing in the tradition and teaching of the one holy catholic (Christian) and apostolic Church as enumerated in the Confessions of the Evangelical Lutheran Church (Book of Concord). We have been a member congregation of the <a href="http://lcms.org/">Lutheran Church – Missouri Synod (LCMS)</a> since our formation in 1890.</p>
+                </li>
+                <li>We are Church
+                    <p>Called, gathered, enlightened and sanctified by the Holy Spirit for Witness, Mercy, and Life Together</p>
+                    <ul>
+                        <li>We are a multigenerational faith family who gather to receive God’s forgiveness, life, and salvation in Christ, through the preaching and teaching of His Word, and in the administration of His Sacraments.</li>
+                        <li>We seek to be engaged with our community in works of love to our neighbors and are committed to sharing Jesus with people of all ages and cultures.</li>
+                        <li>We gather together for worship according to the Church’s historic liturgy each Sunday at 8:00 and 10:30 AM.</li>
+                        <li>We gather for Bible instruction and discussion for all ages every Sunday at 9:15 AM.</li>
+                        <li>Zion is not the only place where the Word of God in Christ is preached and His gifts are received; but it is one place.  We welcome you to join us!</li>
+                    </ul>
+                </li>
+
+            </ul>
+        </div>
+    </div>
+{% endblock %}

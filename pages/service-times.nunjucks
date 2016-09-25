@@ -1,0 +1,11 @@
+{% extends "layout.nunjucks" %}
+{% block content %}
+    {% include "partials/header.nunjucks" %}
+    {% include "partials/menu.nunjucks" %}
+    <div class="content-wrapper">
+        <div class="text-container">
+            <p>Join us on Sundays at 8:00 a.m. or 10:30 a.m. for Sunday services.</p>
+            <p>Bible study for all ages is at 9:15 a.m.</p>
+        </div>
+    </div>
+{% endblock %}
