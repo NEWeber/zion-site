@@ -1,0 +1,45 @@
+<!-- Menu & header: Should be the same on every page -->
+<div class="menu-wrap">
+    <nav class="menu">
+        <ul class="clearfix">
+            <li><a href="./index.html">Home</a></li>
+            <li>
+                <a href="./service-times.html">Service Times <span class="arrow">&#9660;</span></a>
+                <ul class="sub-menu service-times">
+                    <p>8:00 a.m.</p>
+                    <p>9:15 a.m. Bible Study</p>
+                    <p>10:30 a.m.</p>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Visiting <span class="arrow">&#9660;</span></a>
+                <ul class="sub-menu">
+                    <li><a href="./directions.html">Getting Here</a></li>
+                    <li><a href="./service-times.html">Service Times</a></li>
+                    <!-- <li><a href="#">What to Expect</a></li> -->
+                </ul>
+            </li>
+            <li>
+                <a href="./believe.html">Beliefs <span class="arrow">&#9660;</span></a>
+                <ul class="sub-menu">
+                    <li><a href="./believe.html">What We Believe</a></li>
+                    <li><a href="./holy-baptism.html">Holy Baptism</a></li>
+                    <li><a href="./lords-supper.html">The Lord's Supper</a></li>
+                    <li><a href="./confession.html">Confession</a></li>
+                    <li><a href="./catechesis.html">Catechesis</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="./about-us.html">About Us <span class="arrow">&#9660;</span></a>
+                <ul class="sub-menu">
+                    <li><a href="./about-us.html">About Zion</a></li>
+                    <li><a href="./believe.html">What We Believe</a></li>
+                    <li><a href="./more-about.html">More About Us</a></li>
+                    <li><a href="./membership.html">Membership at Zion</a></li>
+                </ul>
+            </li>
+            <li><a href="./staff.html">Staff</a></li>
+            <!-- TODO: Education? Other nav topics? -->
+        </ul>
+    </nav>
+</div>

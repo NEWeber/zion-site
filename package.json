@@ -4,6 +4,7 @@
   "description": "Zion Lutheran's Website",
   "main": "js/main.js",
   "dependencies": {
+    "del": "^2.2.2",
     "gulp": "^3.9.1",
     "gulp-nunjucks-render": "^2.0.0"
   },

@@ -1,0 +1,23 @@
+{% extends "layout.nunjucks" %}
+{% block content %}
+    {% include "partials/menu.nunjucks" %}
+    <div class="homepage content-wrapper">
+        <div class="name-cover"></div>
+        <div class="text-container">
+            <p>
+                Welcome to Zion Lutheran, a congregation of the Lutheran Church
+                Missouri Synod (LCMS) in Tacoma.
+            </p>
+            <p>We're located at 3410 6th Ave, Tacoma, WA, one block east of Union Avenue.</p>
+            <p>Our service times on Sunday are 8:00 and 10:30 with Bible Study for all ages at 9:15</p>
+            <div class="btn-container"><a class="btn btn-primary">Visit Zion</a></div>
+            <p>Questions? Contact us at 253-752-1264 or <a href="mailto:ziontacoma@nventure.com">email us</a></p>
+        </div>
+        <!-- <div class="side-image">
+            <img src="../../zion anniversary photos/holy trinity 004.jpg" />
+        </div>
+        <div class="side-image side-image-2">
+            <img src="../../zion anniversary photos/vespers service 010.jpg" />
+        </div> -->
+    </div>
+{% endblock %}
