@@ -74,11 +74,18 @@ a {
     left:0 ;
     position: absolute;
     z-index: -1;
+    @media (max-width: 1100px ) {
+        background-image: url( "../img/wide-no-name-zion-street.jpg") ;
+    }
 }
 
 .homepage.content-wrapper::after {
     background-image: url( "../img/wider-new-zion-street2.jpg" );
+    @media (max-width: 1100px ) {
+        background-image: url( "../img/wide-new-zion-street.jpg") ;
+    }
 }
+
 
 .content-wrapper p {
     position:relative;
