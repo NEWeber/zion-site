@@ -11,7 +11,7 @@
                 </ul>
             </li>
             <li>
-                <a href="#">Visiting <span class="arrow">&#9660;</span></a>
+                <a href="./visiting.html">Visiting <span class="arrow">&#9660;</span></a>
                 <ul class="sub-menu">
                     <li><a href="./directions.html">Getting Here</a></li>
                     <li><a href="./service-times.html">Service Times</a></li>

@@ -1,0 +1,29 @@
+{% extends "layout.nunjucks" %}
+{% block content %}
+    {% include "partials/header.nunjucks" %}
+    {% include "partials/menu.nunjucks" %}
+    <div class="content-wrapper">
+        <div class="map-wrapper">
+            <!-- TODO: Make map responsive, see http://www.labnol.org/internet/embed-responsive-google-maps/28333/ -->
+            <iframe width="400" height="400" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJPd_AAyJVkFQRQ3Cl8tEleNI&key=AIzaSyD5fzLwTcp050iv7tMmVcmq1aDpyqn83Tw" allowfullscreen></iframe>
+        </div>
+        <div class="text-container directions-text clearfix">
+            <h1>Visiting Zion</h1>
+            <h3>Getting Here</h3>
+            <p>See the map on this page or go <a href="./directions.html">here</a> for more detailed directions</p>
+            <h3>What to expect</h3>
+            <p>We're glad you're thinking about visting Zion!</p>
+            <p>
+                Our Divine Service follows the historic pattern of the church with
+                liturgical music and hymns from throughout the church's history.
+                The order of the service is printed in your bulletin to make it
+                easy to follow along. If you have questions about the service,
+                please ask.
+            </p>
+            <p>
+                If you're visiting us on a Sunday when we celebrate the Lord's Supper,
+                and you would like to take the sacrament, please plan to arrive
+                15 minutes before the service to intoduce yourself to the pastor.
+            </p>
+    </div>
+{% endblock %}
