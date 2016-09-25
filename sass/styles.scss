@@ -86,7 +86,6 @@ a {
     }
 }
 
-
 .content-wrapper p {
     position:relative;
 }
@@ -115,6 +114,30 @@ a {
         color: $primary-color;
     }
     font-size: 1.125em;
+    .btn-container {
+        margin-right: auto;
+        margin-left: auto;
+        text-align: center;
+        width: 150px;
+        height: 60px;
+        background: $primary-color;
+        line-height: 55px;
+        border: 1px solid $complementary-gray;
+        margin-bottom: 25px;
+        border-radius: 10px;
+    }
+
+    .btn-primary {
+        display: inline-block;
+        vertical-align: middle;
+        line-height: normal;
+        color: $complementary-neutral-dark;
+        font-family: 'Ek Mukta';
+        font-size: 1.5em;
+    }
+    .btn-primary:hover {
+        color: $complementary-neutral-light;
+    }
 }
 
 .scroll-wrapper {
