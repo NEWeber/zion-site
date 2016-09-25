@@ -4,14 +4,15 @@ var nunjucksRender = require( 'gulp-nunjucks-render' );
 var sass           = require( 'gulp-sass' );
 
 //Delete old files in target
-gulp.task( 'clean', function () {
+gulp.task( 'clean', function ( cb ) {
     return del( [
         'target/**/*'
     ] );
+    cb( err );
 } );
 
 //Compile nunjucks files, put in target
- gulp.task( 'nunjucks', function() {
+ gulp.task( 'nunjucks', [ 'clean' ], function() {
      return gulp.src( 'pages/**/*.+(html|nunjucks)' )
      .pipe( nunjucksRender( {
          path: [ 'templates' ]
@@ -20,14 +21,14 @@ gulp.task( 'clean', function () {
  } );
 
 //Compile sass, put in target/css
- gulp.task( 'sass', function() {
+ gulp.task( 'sass', [ 'clean' ], function() {
      return gulp.src( './sass/**/*.scss' )
      .pipe( sass().on( 'error', sass.logError ) )
      .pipe( gulp.dest( './target/css' ) );
  } );
- 
+
 // checkout https://github.com/sindresorhus/gulp-imagemin for images
- gulp.task( 'copy', function() {
+ gulp.task( 'copy', [ 'clean' ], function() {
      gulp.src( './img/*' )
      .pipe( gulp.dest( './target/img' ) );
  } );
