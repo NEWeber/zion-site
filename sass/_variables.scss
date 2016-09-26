@@ -99,3 +99,6 @@ $black: grayscale($complementary-neutral-dark);
 
 $analogous-color: adjust-hue($complementary-color, -40);
 $complementary-analogous: mix($analogous-color, $complementary-color, 66);
+
+//grid variables
+$base-grid-width: .0833;

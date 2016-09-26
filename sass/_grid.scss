@@ -1,0 +1,85 @@
+@import "variables";
+
+.grid-container {
+    width: 100%;
+    //based on background image width.
+    max-width: 1333px;
+    //center on page
+    margin-right: auto;
+    margin-left: auto;
+    * {
+        box-sizing: border-box;
+    }
+    .row:before,
+    .row:after {
+        content:"";
+        display: table ;
+        clear:both;
+    }
+    .row {
+        [class*='col-'] {
+            float: left;
+            min-height: 1px;
+            padding: 12px;
+        }
+        //TODO: look up how to do with loop
+        .col-1 {
+            width: $base-grid-width * 100%;
+        }
+        .col-2 {
+            width: $base-grid-width * 2 * 100%;
+        }
+        .col-3 {
+            width: $base-grid-width * 3 * 100%;
+        }
+        .col-4 {
+            width: $base-grid-width * 4 * 100%;
+        }
+        .col-5 {
+            width: $base-grid-width * 5 * 100%;
+        }
+        .col-6 {
+            width: $base-grid-width * 6 * 100%;
+        }
+        .col-7 {
+            width: $base-grid-width * 7 * 100%;
+        }
+        .col-8 {
+            width: $base-grid-width * 8 * 100%;
+        }
+        .col-9 {
+            width: $base-grid-width * 9 * 100%;
+        }
+        .col-10 {
+            width: $base-grid-width * 10 * 100%;
+        }
+        .col-11 {
+            width: $base-grid-width * 11 * 100%;
+        }
+        .col-12 {
+            width: 100%;
+        }
+        @media all and (max-width:750px) {
+            .col-1{ width: 33.33%; }
+            .col-2{ width: 33.33%; }
+            .col-3{ width: 50%; }
+            .col-4{ width: 50%; }
+            .col-5{ width: 50%; }
+            .col-6{ width: 83.33%; }
+            .col-7{ width: 83.33%; }
+            .col-8{ width: 100%; }
+            .col-9{ width: 100%; }
+            .col-10{ width: 100%; }
+            .col-11{ width: 100%; }
+            .col-12{ width: 100%; }
+
+            .row .col-2:last-of-type{
+                width: 100%;
+            }
+
+            .row .col-5 ~ .col-1{
+                width: 100%;
+            }
+        }
+    }
+}
