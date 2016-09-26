@@ -1,6 +1,6 @@
-<div class="menu-wrap">
+<div class="menu-wrap clearfix">
     <nav class="menu">
-        <ul class="clearfix">
+        <ul>
             <li><a href="./index.html">Home</a></li>
             <li>
                 <a href="./service-times.html">Service Times <span class="arrow">&#9660;</span></a>

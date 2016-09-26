@@ -7,11 +7,15 @@
     background: $complementary-neutral-dark;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 20px;
 }
 
 .menu {
-    width:1000px;
     margin: 0 auto;
+    display: table;
+    ul {
+        margin: 0;
+    }
 }
 
 .menu li {
