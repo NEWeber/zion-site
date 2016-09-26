@@ -5,7 +5,7 @@
     <div class="content-wrapper">
         <div class="map-wrapper">
             <!-- TODO: Make map responsive, see http://www.labnol.org/internet/embed-responsive-google-maps/28333/ -->
-            <iframe width="400" height="400" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJPd_AAyJVkFQRQ3Cl8tEleNI&key=AIzaSyD5fzLwTcp050iv7tMmVcmq1aDpyqn83Tw" allowfullscreen></iframe>
+            <iframe width="500" height="400" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJPd_AAyJVkFQRQ3Cl8tEleNI&key=AIzaSyD5fzLwTcp050iv7tMmVcmq1aDpyqn83Tw" allowfullscreen></iframe>
         </div>
         <div class="text-container directions-text clearfix">
             <h2>Getting to Zion</h2>
