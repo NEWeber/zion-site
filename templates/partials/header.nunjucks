@@ -1,9 +1,11 @@
-<div class="header-wrap row">
-    <h1 class="col-9">Zion Evangelical Lutheran Church, UAC <span>LCMS</span></h1>
-    <div class="header-service-times col-3">
-        Sunday 8:00 a.m. </br>
-        Sunday 10:30 a.m. </br>
-        Sunday Bible Study 9:15 a.m.
+<div class="grid-container">
+    <div class="header-wrap row">
+        <h1 class="col-9">Zion Evangelical Lutheran Church, UAC <span>LCMS</span></h1>
+        <div class="header-service-times col-3">
+            Sunday 8:00 a.m. </br>
+            Sunday 10:30 a.m. </br>
+            Sunday Bible Study 9:15 a.m.
+        </div>
+        <div class="clearfix"></div>
     </div>
-    <div class="clearfix"></div>
 </div>
