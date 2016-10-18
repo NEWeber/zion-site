@@ -37,8 +37,8 @@
                     <li><a href="./membership.html">Membership at Zion</a></li>
                 </ul>
             </li>
-            <li><a href="./staff.html">Staff</a></li>
-            <!-- TODO: Education? Other nav topics? -->
+            {# <li><a href="./staff.html">Staff</a></li> #}
+            {# <!-- TODO: Education? Other nav topics? --> #}
         </ul>
     </nav>
 </div>
