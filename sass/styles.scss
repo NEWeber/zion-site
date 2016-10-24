@@ -25,15 +25,18 @@ a {
     margin-bottom: 20px;
 
     h1 {
-        font-size: 36px;
+        font-size: 40px;
         float: left;
         margin: 0;
+        font-weight: normal;
     }
 }
 
 
 .header-wrap h1 span {
     font-size: 28px;
+    font-weight: normal;
+    font-family: $headline-font;
 }
 
 .header-wrap .header-service-times {
@@ -43,6 +46,7 @@ a {
     padding: 20px;
     border-radius: 10px;
     color: $white;
+    font-family: $secondary-font;
 }
 
 .clearfix:after {
@@ -83,9 +87,9 @@ a {
 }
 
 .homepage.content-wrapper::after {
-    background-image: url( "../img/wider-new-zion-street2.jpg" );
+    background-image: url( "../img/glass-only-bkground.jpg" );
     @media (max-width: 1100px ) {
-        background-image: url( "../img/wide-new-zion-street.jpg");
+        background-image: url( "../img/glass-only-bkground.jpg");
     }
 }
 
@@ -98,9 +102,9 @@ a {
     margin: 25px;
 }*/
 
-.homepage .name-cover {
-    width:auto;
-    height:360px;
+.homepage .church-image {
+    display: block;
+    margin: auto;
 }
 
 .text-container {
@@ -110,6 +114,7 @@ a {
     max-width:656px;
     margin-right: auto;
     margin-left: auto;
+    font-family: $secondary-font;
     a {
         color: $complementary-neutral;
     }
@@ -130,7 +135,7 @@ a {
         margin-bottom: 25px;
         border-radius: 10px;
         color: $complementary-neutral-dark;
-        font-family: 'Ek Mukta';
+        font-family: $headline-font;
         font-size: 1.5em;
     }
 
