@@ -2,7 +2,9 @@
 {% block content %}
     {% include "partials/menu.nunjucks" %}
     <div class="homepage content-wrapper">
-        <div class="name-cover"></div>
+        <div>
+            <img class="church-image" src="./img/zion-small-img.jpg" alt="Zion Evangelical Lutheran Church" />
+        </div>
         <div class="text-container">
             <p>
                 Welcome to Zion Lutheran, a congregation of the Lutheran Church
@@ -13,11 +15,11 @@
             <a href="./visiting.html" class="btn-container"><span class="btn btn-primary">Visit Zion</span></a>
             <p>Questions? Contact us at 253-752-1264 or <a href="mailto:ziontacoma@nventure.com">email us</a></p>
         </div>
-        <!-- <div class="side-image">
+        {# <div class="side-image">
             <img src="../../zion anniversary photos/holy trinity 004.jpg" />
         </div>
         <div class="side-image side-image-2">
             <img src="../../zion anniversary photos/vespers service 010.jpg" />
-        </div> -->
+        </div> #}
     </div>
 {% endblock %}
