@@ -4,18 +4,49 @@
     {% include "partials/menu.nunjucks" %}
     <div class="content-wrapper">
         <div class="text-container">
-            <h1>Who We Are</h1>
+            <h1>More About Zion</h1>
 
             <p>
-                Our church gets its name from the word which in the Old Testament was a reference to the Temple Mount in Jerusalem.  Zion (sometimes Mount Zion) was the place where heaven and earth met.  It was the place to which God’s people were drawn in faith to receive the forgiveness of their sins through the sacrificial rites which took place there.  Likewise, for the Christian, the Church is the place where they are drawn in faith to receive God’s gifts of forgiveness, life and salvation; all given through the sacrifice of Christ on the cross, and received through the proclamation of God’s Word and administration of His Sacraments.
+                Our church gets its name from the word which in the Old Testament
+                was a reference to the Temple Mount in Jerusalem.  Zion (sometimes Mount Zion)
+                was the place where heaven and earth met.  It was the place to
+                which God’s people were drawn in faith to receive the forgiveness
+                of their sins through the sacrificial rites which took place there.
+                Likewise, for the Christian, the Church is the place where they are
+                drawn in faith to receive God’s gifts of forgiveness, life and
+                salvation; all given through the sacrifice of Christ on the cross,
+                and received through the proclamation of God’s Word and administration
+                of His Sacraments.
             </p>
 
             <p>
-                One of the oldest Churches in Washington State, since 1890 Zion has consisted of God’s people gathering to receive His forgiving and life-giving gifts and serve the needs of the Tacoma area. We hope that this website will encourage you to come hear the Word of God and pray with us.  We are an imperfect group of sinners gathered around a shared confession of Christ and His Gospel and trusting Him for our righteousness and justification.
+                One of the oldest Churches in Washington State, since 1890 Zion
+                has consisted of God’s people gathering to receive His forgiving
+                and life-giving gifts and serve the needs of the Tacoma area. 
+                We hope that this website will encourage you to come hear the
+                Word of God and pray with us.  We are an imperfect group of sinners
+                gathered around a shared confession of Christ and His Gospel and
+                trusting Him for our righteousness and justification.
             </p>
 
             <p>
-                Community service projects, social gatherings, and educational opportunities are also a big part of Zion’s life.  However, while these and a whole host of other activities take place in and around Zion, Word and Sacrament ministry in worship is the activity which defines our life in Christ, and from which all other of life’s activities draw their meaning.  All we are and all we do are shaped and guided by the Holy Scriptures and worship according to the liturgy of the Church handed down through generations. By God’s grace, we will continue faithfully in His Word until Christ returns in Glory, bringing with him the new Zion where all God’s children in Christ will live and serve together in everlasting righteousness, innocence, and blessedness in His kingdom which has no end.  Until that day of His final coming, we invite and encourage you to come and visit us in person soon, that we might wait on him in the midst of this uncertain and fallen world, comfort one another with the hope of Christ, and experience God’s coming among us via His gifts in Word and Sacrament.
+                Community service projects, social gatherings, and educational
+                opportunities are also a big part of Zion’s life.  However, while
+                these and a whole host of other activities take place in and around
+                Zion, Word and Sacrament ministry in worship is the activity
+                which defines our life in Christ, and from which all other of
+                life’s activities draw their meaning.  All we are and all we do
+                are shaped and guided by the Holy Scriptures and worship according
+                to the liturgy of the Church handed down through generations.
+                By God’s grace, we will continue faithfully in His Word until
+                Christ returns in Glory, bringing with him the new Zion where
+                all God’s children in Christ will live and serve together in
+                everlasting righteousness, innocence, and blessedness in His kingdom
+                which has no end.  Until that day of His final coming, we invite
+                and encourage you to come and visit us in person soon, that we
+                might wait on him in the midst of this uncertain and fallen world,
+                comfort one another with the hope of Christ, and experience God’s
+                coming among us via His gifts in Word and Sacrament.
             </p>
         </div>
     </div>
