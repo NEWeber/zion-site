@@ -4,6 +4,7 @@
     {% include "partials/menu.nunjucks" %}
     <div class="content-wrapper">
         <div class="text-container">
+            <h1>Membership at Zion</h1>
             <div class="membership-section">
                 <h2><a href="./holy-baptism.html">Baptism</a></h2>
                 <p>Baptism is the gift which Christ gave the Church in order to bring people of all ages into His Church. It is not the end but just the beginning of the Christian life and is usually done with the understanding that the baptized will live their Christian life receiving Christ’s gifts in the Divine Service (worship) and growing in Christ’s Word under the instruction of their parents in the home (in the case of children) and through opportunities provided for all ages in Bible classes and Catechesis (see below). Adults who have not already been baptized according to Christ’s Word (or the parents of infants and children not yet baptized) are invited to go through a small amount of instruction to prepare for baptism. <strong>If you are unsure if you are Baptized or if you do not know if you were baptized validly in the name of the Triune God according to Christ’s Word, please speak with our pastor.</strong> He will be able to work with you to determine whether Baptism should take place.</p>
