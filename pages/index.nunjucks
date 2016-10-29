@@ -13,7 +13,7 @@
             <p>We're located at 3410 6th Ave, Tacoma, WA, 98406 one block east of Union Avenue.</p>
             <p>Our service times on Sunday are 8:00 and 10:30 with Bible Study for all ages at 9:15</p>
             <a href="./visiting.html" class="btn-container"><span class="btn btn-primary">Visit Zion</span></a>
-            <p>Questions? Contact us at 253-752-1264 or <a href="mailto:ziontacoma@nventure.com">email us</a></p>
+            <p>Questions? Contact us at 253-752-1264 or <a href="./contact.html">email us</a></p>
         </div>
         {# <div class="side-image">
             <img src="../../zion anniversary photos/holy trinity 004.jpg" />
