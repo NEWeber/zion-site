@@ -11,6 +11,7 @@
                 <input type="hidden" name="_valid[name]" value="required">
                 <label for="email">Your Email</label>
                 <input id="email" type="email" name="email">
+                <input type="hidden" name="_replyto" value="%email">
                 <input type="hidden" name="_valid[email]" value="required|valid_email">
                 <input type="hidden" name="_subject" value="Website Contact">
                 <label for="email-message">Your Message</label>
