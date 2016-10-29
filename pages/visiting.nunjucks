@@ -23,7 +23,8 @@
             <p>
                 If you're visiting us on a Sunday when we celebrate the <a href="./lords-supper.html">Lord's Supper</a>,
                 and you would like to take the sacrament, please plan to arrive
-                15 minutes before the service to intoduce yourself to the pastor.
+                15 minutes before the service to intoduce yourself to the pastor
+                or <a href="./contact.html">contact him</a> prior to your visit.
             </p>
     </div>
 {% endblock %}

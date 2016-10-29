@@ -1,0 +1,10 @@
+{% extends "layout.nunjucks" %}
+{% block content %}
+    {% include "partials/header.nunjucks" %}
+    {% include "partials/menu.nunjucks" %}
+    <div class="content-wrapper">
+        <div class="text-container">
+            <p>Thanks for contacting Zion! We'll be in touch soon.</p>
+        </div>
+    </div>
+{% endblock %}
