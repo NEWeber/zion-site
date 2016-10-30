@@ -1,3 +1,4 @@
+{% set pageTitle = "Directions - Zion Lutheran" %}
 {% extends "layout.nunjucks" %}
 {% block content %}
     {% include "partials/header.nunjucks" %}

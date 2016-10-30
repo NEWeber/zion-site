@@ -1,3 +1,4 @@
+{% set pageTitle = "Zion Evangelical Lutheran Church of Tacoma, UAC (LCMS)" %}
 {% extends "layout.nunjucks" %}
 {% block content %}
     {% include "partials/menu.nunjucks" %}

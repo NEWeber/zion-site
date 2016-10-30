@@ -1,3 +1,4 @@
+{% set pageTitle = "More About Us - Zion Lutheran" %}
 {% extends "layout.nunjucks" %}
 {% block content %}
     {% include "partials/header.nunjucks" %}

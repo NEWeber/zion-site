@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>Zion Lutheran Church of Tacoma, UAC</title>
+        <title>{{ pageTitle }}</title>
         <meta charset="utf-8" />
         <link href="https://fonts.googleapis.com/css?family=Open+Sans|Sorts+Mill+Goudy" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Ek+Mukta" />
