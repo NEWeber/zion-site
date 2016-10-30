@@ -1,0 +1,3 @@
+{% macro title(pageTitle='Zion Lutheran Church of Tacoma, UAC')%}
+    <title>{{ pageTitle }}</title>
+{% endmacro %}
