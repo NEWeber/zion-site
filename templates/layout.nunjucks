@@ -1,4 +1,3 @@
-{% import './macros/title.nunjucks' as title %}
 <!DOCTYPE html>
 <html lang="en">
     <head>
