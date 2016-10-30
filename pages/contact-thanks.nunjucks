@@ -1,4 +1,4 @@
-{% set pageTitle = "Thank you for contactin us - Zion Lutheran" %}
+{% set pageTitle = "Thank you for contacting us - Zion Lutheran" %}
 {% extends "layout.nunjucks" %}
 {% block content %}
     {% include "partials/header.nunjucks" %}
