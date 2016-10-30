@@ -1,3 +1,4 @@
+{% set pageTitle = "What we Believe - Zion Lutheran" %}
 {% extends "layout.nunjucks" %}
 {% block content %}
     {% include "partials/header.nunjucks" %}
