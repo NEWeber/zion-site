@@ -7,9 +7,9 @@ Dev Requirements:
 - `npm`
 
 Dev Setup:
-1. Clone project.
-1. Run `npm install` in project root.
-1. Run `gulp` from project root to get assets into  `target`
-1. Upload `target` to host.
+ 1. Clone project. 
+ 2. Run `npm install` in project root. 
+ 3. Run `gulp` from project root to get assets into  `target`
+ 4. Upload `target` to host.
 
 Development by Nicholas Weber, most copy written by Pastor Jeffrey Ries 
