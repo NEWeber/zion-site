@@ -31,7 +31,7 @@
 
 .menu li:hover > a,
 .menu .current-item > a {
-    /*Why does this work to select both the top level and the lower level and not all links on lower level?*/
+    //Why does this work to select both the top level and the lower level and not all links on lower level?
     text-decoration: none;
     color: $white;
 }
