@@ -1,4 +1,5 @@
-        <ul class="topnav">
+    <nav class="menu">
+        <ul id="my-top-nav" class="topnav">
             <li><a href="./index.html">Home</a></li>
             <li>
                 <a href="./service-times.html">Service Times <span class="arrow">&#9660;</span></a>
@@ -37,7 +38,8 @@
             </li>
             {# <li><a href="./staff.html">Staff</a></li> #}
             <li class="icon">
-                <a onclick="myFunction()">&#9776;</a>
+                <a href="javascript:void(0);" onclick="myFunction()">&#9776;</a>
             </li>
             {# TODO: Education? Other nav topics? #}
         </ul>
+    </nav>
