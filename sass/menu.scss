@@ -1,101 +1,61 @@
 @import "variables";
 
-.menu-wrap {
-    max-width: 1150px;
-    width: 100%;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.2);
-    background: $complementary-neutral-dark;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 20px;
+.menu {
+    // max-width: 1150px;
+    // width: 100%;
 }
 
-.menu {
-    margin: 0 auto;
-    display: table;
-    ul {
-        margin: 0;
+.topnav {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    list-style-type: none;
+    background-color: $complementary-neutral-dark;
+    margin-bottom: 20px;
+
+    li {
+        float: left;
+        font-family: $headline-font;
+
+        a {
+            display: inline-block;
+            color: $primary-neutral-light;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: underline;
+            transition: 0.3s;
+
+        }
+        .icon {
+            display: none;
+        }
+    }
+    .sub-menu {
+        display: none;
     }
 }
 
-.menu li {
-    margin: 0;
-    list-style: none;
-    font-family: $headline-font;
-}
+@media screen and (max-width:850px) {
+    ul.topnav li:not(:first-child) {display: none;}
+    ul.topnav li.icon {
+        float: right;
+        display: inline-block;
+    }
 
-.menu a {
-    transition: all linear 0.15s;
-    color: $primary-neutral-light;
-}
-
-.menu li:hover > a,
-.menu .current-item > a {
-    //Why does this work to select both the top level and the lower level and not all links on lower level?
-    text-decoration: none;
-    color: $white;
-}
-
-ul .service-times {
-    text-decoration:none;
-    color: $white;
-    padding:10px 40px;
-    display:inline-block;
-    font-size: 100%;
-}
-
-.menu .arrow {
-    font-size: 11px;
-    line-height: 0%;
-}
-
-.menu > ul > li {
-    float: left;
-    display: inline-block;
-    position: relative;
-    font-size: 19px;
-}
-
-.menu > ul > li > a {
-    padding: 10px 30px;
-    display: inline-block;
-    text-shadow: 0 1px 0 rgba($black, 0.4);
-}
-
-.menu > ul > li:hover > a,
-.menu > ul > .current-item > a,
-.sub-menu li a:hover,
-.sub-menu .current-item a {
-    background: $complementary-neutral-light;
-    color: $primary-color;
-}
-
-.menu li:hover .sub-menu {
-    z-index: 1;
-    opacity: 1;
-    display: initial;
-}
-
-.sub-menu {
-    width: 160%;
-    padding: 5px 0;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    z-index:-1;
-    opacity: 0;
-    transition: opacity linear 0.15s;
-    box-shadow: 0 2px 3px rgba(0,0,0,0.4);
-    background: $complementary-neutral-dark;
-    display: none;
-}
-
-.sub-menu li {
-    display: block;
-    font-size: 16px;
-}
-
-.sub-menu li a {
-    padding: 10px 30px;
-    display: block;
+    .topnav.responsive {
+        position: relative;
+    }
+    li.icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+    .responsive li {
+        float: none;
+        display: inline;
+        a {
+            display: block;
+            text-align: left;
+        }
+    }
 }

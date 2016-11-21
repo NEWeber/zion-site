@@ -1,6 +1,4 @@
-<div class="menu-wrap clearfix">
-    <nav class="menu">
-        <ul>
+        <ul class="topnav">
             <li><a href="./index.html">Home</a></li>
             <li>
                 <a href="./service-times.html">Service Times <span class="arrow">&#9660;</span></a>
@@ -38,7 +36,8 @@
                 </ul>
             </li>
             {# <li><a href="./staff.html">Staff</a></li> #}
+            <li class="icon">
+                <a onclick="myFunction()">&#9776;</a>
+            </li>
             {# TODO: Education? Other nav topics? #}
         </ul>
-    </nav>
-</div>
