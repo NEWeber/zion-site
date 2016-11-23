@@ -15,35 +15,35 @@ gulp.task( 'clean', function ( cb ) {
 } );
 
 //Compile nunjucks files, put in target
- gulp.task( 'nunjucks', [ 'clean' ], function() {
-     return gulp.src( 'pages/**/*.+(html|nunjucks)' )
-     .pipe( nunjucksRender( {
-         path: [ 'templates' ]
-     } ) )
-     .pipe( gulp.dest( 'target' ) )
- } );
+gulp.task( 'nunjucks', [ 'clean' ], function() {
+    return gulp.src( 'pages/**/*.+(html|nunjucks)' )
+    .pipe( nunjucksRender( {
+        path: [ 'templates' ]
+    } ) )
+    .pipe( gulp.dest( 'target' ) )
+} );
 
 //Compile sass, put in target/css
- gulp.task( 'sass', [ 'clean' ], function() {
-     return gulp.src( './sass/**/*.scss' )
-     .pipe( sass().on( 'error', sass.logError ) )
-     .pipe( gulp.dest( './target/css' ) );
- } );
+gulp.task( 'sass', [ 'clean' ], function() {
+    return gulp.src( './sass/**/*.scss' )
+    .pipe( sass().on( 'error', sass.logError ) )
+    .pipe( gulp.dest( './target/css' ) );
+} );
 
- gulp.task( 'compress', [ 'clean' ], function ( cb ) {
-  pump( [
+gulp.task( 'compress', [ 'clean' ], function ( cb ) {
+    pump( [
         gulp.src( './js/*.js' ),
         uglify(),
         gulp.dest( './target/js' )
     ],
     cb
-  );
+    );
 } );
 
 // checkout https://github.com/sindresorhus/gulp-imagemin for images
- gulp.task( 'copy', [ 'clean' ], function() {
-     gulp.src( './img/*' )
-     .pipe( gulp.dest( './target/img' ) );
- } );
+gulp.task( 'copy', [ 'clean' ], function() {
+    gulp.src( './img/*' )
+    .pipe( gulp.dest( './target/img' ) );
+} );
 
- gulp.task( 'default', [ 'clean', 'nunjucks', 'sass', 'compress', 'copy' ] );
+gulp.task( 'default', [ 'clean', 'nunjucks', 'sass', 'compress', 'copy' ] );
