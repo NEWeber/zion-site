@@ -68,7 +68,7 @@ gulp.task( 'copy', function( cb ) {
 
 gulp.task( 'default', [ 'nunjucks', 'sass', 'compress', 'copy' ] );
 
-gulp.task( 'watch', function() {
+gulp.task( 'watch', [ 'default' ], function() {
     gulp.watch( './sass/**/*.scss', [ 'sass' ] );
     gulp.watch( './js/*.js', [ 'compress' ] );
     gulp.watch( ['pages/**/*.nunjucks', 'templates/**/*.nunjucks'], [ 'nunjucks' ] );
