@@ -1,49 +1,96 @@
 var gulp           = require( 'gulp' );
-var pump           = require('pump');
+var pump           = require( 'pump' );
+//TODO: remove del if it's not needed later
 var del            = require( 'del' );
 var nunjucksRender = require( 'gulp-nunjucks-render' );
 var sass           = require( 'gulp-sass' );
-var uglify         = require('gulp-uglify');
-//TODO: change all tasks to use pump
+var uglify         = require( 'gulp-uglify' );
+var notify         = require( 'gulp-notify' );
+var plumber        = require( 'gulp-plumber' );
+var browserSync    = require( 'browser-sync' );
 
-//Delete old files in target
-gulp.task( 'clean', function ( cb ) {
-    return del( [
-        'target/**/*'
-    ] );
-    cb( err );
-} );
+function customerPlumber( errTitle ) {
+    return plumber( {
+        errorHandler: notify.onError( {
+            title: errTitle || "Error running Gulp",
+            message: "Error: <%= error.message %>",
+            sound: 'Glass'
+        } )
+    } );
+}
 
 //Compile nunjucks files, put in target
- gulp.task( 'nunjucks', [ 'clean' ], function() {
-     return gulp.src( 'pages/**/*.+(html|nunjucks)' )
-     .pipe( nunjucksRender( {
-         path: [ 'templates' ]
-     } ) )
-     .pipe( gulp.dest( 'target' ) )
- } );
-
-//Compile sass, put in target/css
- gulp.task( 'sass', [ 'clean' ], function() {
-     return gulp.src( './sass/**/*.scss' )
-     .pipe( sass().on( 'error', sass.logError ) )
-     .pipe( gulp.dest( './target/css' ) );
- } );
-
- gulp.task( 'compress', [ 'clean' ], function ( cb ) {
-  pump( [
-        gulp.src( './js/*.js' ),
-        uglify(),
-        gulp.dest( './target/js' )
+gulp.task( 'nunjucks', function( cb ) {
+    pump( [
+        gulp.src( 'pages/**/*.nunjucks' ),
+        customerPlumber( 'Nunjucks Error' ),
+        nunjucksRender( {
+            path: [ 'templates' ]
+        } ),
+        gulp.dest( 'target' ),
+        browserSync.reload( {
+            stream: true
+        } )
     ],
     cb
-  );
+    );
+} );
+
+//Compile sass, put in target/css
+gulp.task( 'sass', function( cb ) {
+    pump( [
+        gulp.src( './sass/**/*.scss'),
+        customerPlumber( 'SASS Error' ),
+        sass().on( 'error', sass.logError ),
+        gulp.dest( './target/css' ),
+        browserSync.reload( {
+            stream: true
+        } )
+    ],
+    cb
+    );
+} );
+
+gulp.task( 'compress', function ( cb ) {
+    pump( [
+        gulp.src( './js/*.js' ),
+        customerPlumber( 'JS Error' ),
+        uglify(),
+        gulp.dest( './target/js' ),
+        browserSync.reload( {
+            stream: true
+        } )
+    ],
+    cb
+    );
 } );
 
 // checkout https://github.com/sindresorhus/gulp-imagemin for images
- gulp.task( 'copy', [ 'clean' ], function() {
-     gulp.src( './img/*' )
-     .pipe( gulp.dest( './target/img' ) );
- } );
+gulp.task( 'copy', function( cb ) {
+    pump  ( [
+        gulp.src( './img/*' ),
+        customerPlumber( 'Copy Error' ),
+        gulp.dest( './target/img' ),
+        browserSync.reload( {
+            stream: true
+        } )
+    ],
+    cb
+    );
+} );
 
- gulp.task( 'default', [ 'clean', 'nunjucks', 'sass', 'compress', 'copy' ] );
+gulp.task( 'default', [ 'nunjucks', 'sass', 'compress', 'copy' ] );
+
+gulp.task( 'browserSync', function() {
+    browserSync( {
+        server: {
+            baseDir: 'target'
+        }
+    } );
+} );
+
+gulp.task( 'watch', [ 'default', 'browserSync' ], function() {
+    gulp.watch( './sass/**/*.scss', [ 'sass' ] );
+    gulp.watch( './js/*.js', [ 'compress' ] );
+    gulp.watch( ['pages/**/*.nunjucks', 'templates/**/*.nunjucks'], [ 'nunjucks' ] );
+} );
