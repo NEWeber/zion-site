@@ -1,10 +1,9 @@
 var gulp           = require( 'gulp' );
-var pump           = require('pump');
+var pump           = require( 'pump' );
 var del            = require( 'del' );
 var nunjucksRender = require( 'gulp-nunjucks-render' );
 var sass           = require( 'gulp-sass' );
-var uglify         = require('gulp-uglify');
-//TODO: change all tasks to use pump
+var uglify         = require( 'gulp-uglify' );
 
 //Compile nunjucks files, put in target
 gulp.task( 'nunjucks', function( cb ) {
