@@ -7,15 +7,15 @@ var uglify         = require('gulp-uglify');
 //TODO: change all tasks to use pump
 
 //Delete old files in target
-gulp.task( 'clean', function ( cb ) {
-    return del( [
-        'target/**/*'
-    ] );
-    cb( err );
-} );
+// gulp.task( 'clean', function ( cb ) {
+//     return del( [
+//         'target/**/*'
+//     ] );
+//     cb( err );
+// } );
 
 //Compile nunjucks files, put in target
-gulp.task( 'nunjucks', [ 'clean' ], function() {
+gulp.task( 'nunjucks', function() {
     return gulp.src( 'pages/**/*.+(html|nunjucks)' )
     .pipe( nunjucksRender( {
         path: [ 'templates' ]
@@ -24,13 +24,13 @@ gulp.task( 'nunjucks', [ 'clean' ], function() {
 } );
 
 //Compile sass, put in target/css
-gulp.task( 'sass', [ 'clean' ], function() {
+gulp.task( 'sass', function() {
     return gulp.src( './sass/**/*.scss' )
     .pipe( sass().on( 'error', sass.logError ) )
     .pipe( gulp.dest( './target/css' ) );
 } );
 
-gulp.task( 'compress', [ 'clean' ], function ( cb ) {
+gulp.task( 'compress', function ( cb ) {
     pump( [
         gulp.src( './js/*.js' ),
         uglify(),
@@ -41,12 +41,12 @@ gulp.task( 'compress', [ 'clean' ], function ( cb ) {
 } );
 
 // checkout https://github.com/sindresorhus/gulp-imagemin for images
-gulp.task( 'copy', [ 'clean' ], function() {
+gulp.task( 'copy', function() {
     gulp.src( './img/*' )
     .pipe( gulp.dest( './target/img' ) );
 } );
 
-gulp.task( 'default', [ 'clean', 'nunjucks', 'sass', 'compress', 'copy' ] );
+gulp.task( 'default', [ 'nunjucks', 'sass', 'compress', 'copy' ] );
 
 gulp.task( 'watch', function() {
     gulp.watch( './sass/**/*.scss', [ 'sass' ] );
