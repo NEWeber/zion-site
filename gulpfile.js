@@ -16,10 +16,14 @@ gulp.task( 'nunjucks', function() {
 } );
 
 //Compile sass, put in target/css
-gulp.task( 'sass', function() {
-    return gulp.src( './sass/**/*.scss' )
-    .pipe( sass().on( 'error', sass.logError ) )
-    .pipe( gulp.dest( './target/css' ) );
+gulp.task( 'sass', function( cb ) {
+    pump( [
+        gulp.src( './sass/**/*.scss'),
+        sass().on( 'error', sass.logError ),
+        gulp.dest( './target/css' )
+    ],
+    cb
+    );
 } );
 
 gulp.task( 'compress', function ( cb ) {
