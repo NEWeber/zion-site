@@ -6,14 +6,6 @@ var sass           = require( 'gulp-sass' );
 var uglify         = require('gulp-uglify');
 //TODO: change all tasks to use pump
 
-//Delete old files in target
-// gulp.task( 'clean', function ( cb ) {
-//     return del( [
-//         'target/**/*'
-//     ] );
-//     cb( err );
-// } );
-
 //Compile nunjucks files, put in target
 gulp.task( 'nunjucks', function() {
     return gulp.src( 'pages/**/*.nunjucks' )
