@@ -41,9 +41,13 @@ gulp.task( 'compress', function ( cb ) {
 } );
 
 // checkout https://github.com/sindresorhus/gulp-imagemin for images
-gulp.task( 'copy', function() {
-    gulp.src( './img/*' )
-    .pipe( gulp.dest( './target/img' ) );
+gulp.task( 'copy', function( cb ) {
+    pump  ( [
+        gulp.src( './img/*' ),
+        gulp.dest( './target/img' )
+    ],
+    cb
+    );
 } );
 
 gulp.task( 'default', [ 'nunjucks', 'sass', 'compress', 'copy' ] );
