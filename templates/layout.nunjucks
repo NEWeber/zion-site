@@ -17,7 +17,6 @@
         <meta name="theme-color" content="#ffffff">
     </head>
     <body>
-
         {% block content %} {% endblock %}
 
         <script src="./js/main.js"></script>

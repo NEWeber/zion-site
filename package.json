@@ -11,7 +11,11 @@
     "gulp-uglify": "^2.0.0",
     "pump": "^1.0.1"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "browser-sync": "^2.18.2",
+    "gulp-notify": "^2.2.0",
+    "gulp-plumber": "^1.1.0"
+  },
   "scripts": {
     "test": "mocha"
   },
