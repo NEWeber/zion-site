@@ -7,12 +7,16 @@ var uglify         = require('gulp-uglify');
 //TODO: change all tasks to use pump
 
 //Compile nunjucks files, put in target
-gulp.task( 'nunjucks', function() {
-    return gulp.src( 'pages/**/*.nunjucks' )
-    .pipe( nunjucksRender( {
-        path: [ 'templates' ]
-    } ) )
-    .pipe( gulp.dest( 'target' ) )
+gulp.task( 'nunjucks', function( cb ) {
+    pump( [
+        gulp.src( 'pages/**/*.nunjucks' ),
+        nunjucksRender( {
+            path: [ 'templates' ]
+        } ),
+        gulp.dest( 'target' )
+    ],
+    cb
+    );
 } );
 
 //Compile sass, put in target/css
