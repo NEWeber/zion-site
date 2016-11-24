@@ -16,7 +16,7 @@ var uglify         = require('gulp-uglify');
 
 //Compile nunjucks files, put in target
 gulp.task( 'nunjucks', function() {
-    return gulp.src( 'pages/**/*.+(html|nunjucks)' )
+    return gulp.src( 'pages/**/*.nunjucks' )
     .pipe( nunjucksRender( {
         path: [ 'templates' ]
     } ) )
@@ -51,5 +51,5 @@ gulp.task( 'default', [ 'nunjucks', 'sass', 'compress', 'copy' ] );
 gulp.task( 'watch', function() {
     gulp.watch( './sass/**/*.scss', [ 'sass' ] );
     gulp.watch( './js/*.js', [ 'compress' ] );
-    gulp.watch( ['pages/**/*.+(html|nunjucks)', 'templates/**/*.nunjucks'], [ 'nunjucks' ] );
+    gulp.watch( ['pages/**/*.nunjucks', 'templates/**/*.nunjucks'], [ 'nunjucks' ] );
 } );
