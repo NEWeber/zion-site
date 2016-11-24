@@ -12,6 +12,7 @@
     "pump": "^1.0.1"
   },
   "devDependencies": {
+    "browser-sync": "^2.18.2",
     "gulp-notify": "^2.2.0",
     "gulp-plumber": "^1.1.0"
   },

@@ -7,6 +7,7 @@ var sass           = require( 'gulp-sass' );
 var uglify         = require( 'gulp-uglify' );
 var notify         = require( 'gulp-notify' );
 var plumber        = require( 'gulp-plumber' );
+var browserSync    = require( 'browser-sync' );
 
 function customerPlumber( errTitle ) {
     return plumber( {
@@ -26,7 +27,10 @@ gulp.task( 'nunjucks', function( cb ) {
         nunjucksRender( {
             path: [ 'templates' ]
         } ),
-        gulp.dest( 'target' )
+        gulp.dest( 'target' ),
+        browserSync.reload( {
+            stream: true
+        } )
     ],
     cb
     );
@@ -38,7 +42,10 @@ gulp.task( 'sass', function( cb ) {
         gulp.src( './sass/**/*.scss'),
         customerPlumber( 'SASS Error' ),
         sass().on( 'error', sass.logError ),
-        gulp.dest( './target/css' )
+        gulp.dest( './target/css' ),
+        browserSync.reload( {
+            stream: true
+        } )
     ],
     cb
     );
@@ -49,7 +56,10 @@ gulp.task( 'compress', function ( cb ) {
         gulp.src( './js/*.js' ),
         customerPlumber( 'JS Error' ),
         uglify(),
-        gulp.dest( './target/js' )
+        gulp.dest( './target/js' ),
+        browserSync.reload( {
+            stream: true
+        } )
     ],
     cb
     );
@@ -60,7 +70,10 @@ gulp.task( 'copy', function( cb ) {
     pump  ( [
         gulp.src( './img/*' ),
         customerPlumber( 'Copy Error' ),
-        gulp.dest( './target/img' )
+        gulp.dest( './target/img' ),
+        browserSync.reload( {
+            stream: true
+        } )
     ],
     cb
     );
@@ -68,7 +81,15 @@ gulp.task( 'copy', function( cb ) {
 
 gulp.task( 'default', [ 'nunjucks', 'sass', 'compress', 'copy' ] );
 
-gulp.task( 'watch', [ 'default' ], function() {
+gulp.task( 'browserSync', function() {
+    browserSync( {
+        server: {
+            baseDir: 'target'
+        }
+    } );
+} );
+
+gulp.task( 'watch', [ 'default', 'browserSync' ], function() {
     gulp.watch( './sass/**/*.scss', [ 'sass' ] );
     gulp.watch( './js/*.js', [ 'compress' ] );
     gulp.watch( ['pages/**/*.nunjucks', 'templates/**/*.nunjucks'], [ 'nunjucks' ] );
