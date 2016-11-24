@@ -51,5 +51,5 @@ gulp.task( 'default', [ 'nunjucks', 'sass', 'compress', 'copy' ] );
 gulp.task( 'watch', function() {
     gulp.watch( './sass/**/*.scss', [ 'sass' ] );
     gulp.watch( './js/*.js', [ 'compress' ] );
-    gulp.watch( 'pages/**/*.+(html|nunjucks)', [ 'nunjucks' ] );
+    gulp.watch( ['pages/**/*.+(html|nunjucks)', 'templates/**/*.nunjucks'], [ 'nunjucks' ] );
 } );
