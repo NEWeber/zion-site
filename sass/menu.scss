@@ -12,9 +12,15 @@
     list-style-type: none;
     background-color: $complementary-neutral-dark;
     margin-bottom: 20px;
+    text-align: center;
 
     li {
-        float: left;
+        @media screen and (min-width:$menu-breakpoint-above) {
+            display: inline-block;
+        }
+        @media screen and (max-width:$menu-breakpoint-below) {
+            float: left;
+        }
         font-family: $headline-font;
         font-size: 19px;
 
