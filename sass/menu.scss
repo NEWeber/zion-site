@@ -60,11 +60,11 @@ ul .service-times {
 }
 
 .sub-menu {
-    width: 160%;
+    // width: 160%;
     padding: 5px 0;
     position: absolute;
-    top: 100%;
-    left: 0;
+    // top: 100%;
+    // left: 0;
     z-index:-1;
     opacity: 0;
     transition: opacity linear 0.15s;
@@ -73,11 +73,15 @@ ul .service-times {
     display: none;
 }
 
+.service-times p {
+    padding: 0 15px
+}
+
 li:hover .sub-menu,
 li:focus .sub-menu {
     z-index: 1;
     opacity: 1;
-    display: initial;
+    display: table;
 }
 
 .sub-menu li {
@@ -88,6 +92,14 @@ li:focus .sub-menu {
 .sub-menu li a {
     padding: 10px 30px;
     display: block;
+}
+
+.service-times {
+    text-decoration:none;
+    color: $white;
+    padding:10px 40px;
+    display:inline-block;
+    font-size: 100%;
 }
 
     .more::after {
