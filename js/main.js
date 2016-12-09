@@ -9,7 +9,7 @@
 //     }
 // } );
 
-function myFunction() {
+function menuToggle() {
     var topnav = document.getElementById("my-top-nav");
     if (topnav.className === "topnav") {
         topnav.className += " responsive";
@@ -25,6 +25,7 @@ for( var counter = 0; counter < numSubmenus; counter++ ) {
         var currentElem = submenus[ counter ];
         currentElem.onclick = function () {
             var currentDisplay = document.getElementById( 'display' );
+            //TODO: Fix so that the following executes synchronously (right now, it removes after it adds)
             if ( currentDisplay ) {
                 currentDisplay.removeAttribute( 'id' );
             }
