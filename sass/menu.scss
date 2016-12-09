@@ -31,7 +31,7 @@
             padding: 14px 16px;
             text-decoration: none;
             transition: 0.3s;
-
+            font-size: 19px;
         }
     }
 .icon {
@@ -46,10 +46,11 @@ ul .service-times {
     font-size: 100%;
 }
 
-.menu > ul > li > a {
+.menu a {
     padding: 10px 30px;
     display: inline-block;
     text-shadow: 0 1px 0 rgba($black, 0.4);
+    font-size: 19px;
 }
 
 .menu > ul > li {
@@ -68,19 +69,28 @@ ul .service-times {
     z-index:-1;
     opacity: 0;
     transition: opacity linear 0.15s;
-    box-shadow: 0 2px 3px rgba(0,0,0,0.4);
     background: $complementary-neutral-dark;
     display: none;
+    @media screen and (min-width:$menu-breakpoint-above) {
+        box-shadow: 0 2px 3px rgba(0,0,0,0.4);
+    }
+    @media screen and (max-width:$menu-breakpoint-below) {
+        width: 100%;
+    }
 }
 
 .service-times p {
     padding: 0 15px
 }
 
-li:hover .sub-menu {
+li:hover .sub-menu,
+#display > .sub-menu {
     z-index: 1;
     opacity: 1;
     display: table;
+    @media screen and (max-width:$menu-breakpoint-below) {
+        position: inherit;
+    }
 }
 
 .sub-menu li {

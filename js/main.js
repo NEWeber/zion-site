@@ -17,3 +17,18 @@ function myFunction() {
         topnav.className = "topnav";
     }
 }
+
+var submenus = document.getElementsByClassName( 'more' );
+var numSubmenus = submenus.length;
+for( var counter = 0; counter < numSubmenus; counter++ ) {
+    var bind = function() {
+        var currentElem = submenus[ counter ];
+        currentElem.onclick = function () {
+            var currentDisplay = document.getElementById( 'display' );
+            if ( currentDisplay ) {
+                currentDisplay.removeAttribute( 'id' );
+            }
+            currentElem.setAttribute( 'id', 'display');
+        }
+    }();
+}
