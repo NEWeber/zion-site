@@ -77,8 +77,7 @@ ul .service-times {
     padding: 0 15px
 }
 
-li:hover .sub-menu,
-li:focus .sub-menu {
+li:hover .sub-menu {
     z-index: 1;
     opacity: 1;
     display: table;
