@@ -1,8 +1,8 @@
     <nav class="menu">
         <ul id="my-top-nav" class="topnav">
             <li><a href="./index.html">Home</a></li>
-            <li>
-                <a class="more" href="">Service Times</a>
+            <li class="more">
+                <a href="">Service Times</a>
                 <ul class="sub-menu service-times">
                     <p>8:00 a.m.</p>
                     <p>9:15 a.m. Bible Study</p>
@@ -11,8 +11,8 @@
                     <p>7:00 p.m. Wednesday</p>
                 </ul>
             </li>
-            <li>
-                <a class="more" href="">Visiting</a>
+            <li class="more">
+                <a href="">Visiting</a>
                 <ul class="sub-menu">
                     <li><a href="./visiting.html">Visiting Zion</a></li>
                     <li><a href="./directions.html">Getting Here</a></li>
@@ -20,8 +20,8 @@
                     {# <li><a href="#">What to Expect</a></li> #}
                 </ul>
             </li>
-            <li>
-                <a class="more" href="">Beliefs</a>
+            <li class="more">
+                <a href="">Beliefs</a>
                 <ul class="sub-menu">
                     <li><a href="./believe.html">What We Believe</a></li>
                     <li><a href="./holy-baptism.html">Holy Baptism</a></li>
@@ -30,8 +30,8 @@
                     <li><a href="./catechesis.html">Catechesis</a></li>
                 </ul>
             </li>
-            <li>
-                <a class="more" href="">About Us</a>
+            <li class="more">
+                <a href="">About Us</a>
                 <ul class="sub-menu">
                     <li><a href="./about-us.html">About Zion</a></li>
                     <li><a href="./believe.html">What We Believe</a></li>
