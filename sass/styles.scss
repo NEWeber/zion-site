@@ -14,12 +14,12 @@ a {
 
 .header-wrap {
     max-width: 1070px;
-    background: $complementary-neutral-light;
+    background: $complementary-neutral-dark;
     padding-top: 20px;
     padding-right: 40px;
     padding-left: 40px;
     padding-bottom: 20px;
-    color: $primary-color;
+    color: $primary-neutral-light;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 20px;
@@ -42,10 +42,10 @@ a {
 .header-wrap .header-service-times {
     float: right;
     width: 200px;
-    background-color: $primary-neutral-dark;
+    background-color: $primary-neutral-light;
     padding: 20px;
     border-radius: 10px;
-    color: $white;
+    color: $black;
     font-family: $secondary-font;
 }
 
@@ -108,7 +108,7 @@ a {
 }
 
 .text-container {
-    background-color: rgba($primary-neutral-light, 0.8);
+    background-color: rgba($white, 0.8);
     padding: 1px 40px 1px 40px;
     //TODO: Make text bigger, make container narrower, starting with below.
     max-width:656px;
@@ -116,10 +116,11 @@ a {
     margin-left: auto;
     font-family: $secondary-font;
     a {
-        color: $complementary-neutral;
+        color: $complementary-dark;
+        text-decoration: underline;
     }
     a:hover {
-        color: $primary-color;
+        color: $primary-neutral-dark;
     }
     font-size: 1.125em;
     .btn-container {
