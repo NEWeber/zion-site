@@ -108,16 +108,15 @@ a {
 }
 
 .text-container {
-    background-color: rgba($primary-neutral-light, 0.8);
+    background-color: rgba($white, 0.8);
     padding: 1px 40px 1px 40px;
     //TODO: Make text bigger, make container narrower, starting with below.
     max-width:656px;
     margin-right: auto;
     margin-left: auto;
     font-family: $secondary-font;
-    //TODO: figure out a better color for a tag that still is right contrast
     a {
-        color: $complementary-neutral-dark;
+        color: $complementary-dark;
         text-decoration: underline;
     }
     a:hover {
