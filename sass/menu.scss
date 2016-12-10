@@ -1,6 +1,7 @@
 @import "variables";
 
 .menu {
+    //TODO: Implement Some sort of max-width for menu
     // max-width: 1150px;
     // width: 100%;
 }
@@ -61,11 +62,8 @@ ul .service-times {
 }
 
 .sub-menu {
-    // width: 160%;
     padding: 5px 0;
     position: absolute;
-    // top: 100%;
-    // left: 0;
     z-index:-1;
     opacity: 0;
     transition: opacity linear 0.15s;
