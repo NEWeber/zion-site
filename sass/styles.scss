@@ -115,11 +115,13 @@ a {
     margin-right: auto;
     margin-left: auto;
     font-family: $secondary-font;
+    //TODO: figure out a better color for a tag that still is right contrast
     a {
-        color: $complementary-neutral;
+        color: $complementary-neutral-dark;
+        text-decoration: underline;
     }
     a:hover {
-        color: $primary-color;
+        color: $primary-neutral-dark;
     }
     font-size: 1.125em;
     .btn-container {
