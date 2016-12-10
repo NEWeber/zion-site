@@ -2,6 +2,9 @@
 $headline-font: 'Sorts Mill Goudy', 'Times New Roman', serif;
 $secondary-font: 'Open Sans', sans-serif;
 
+//breakpoints
+$menu-breakpoint-above: 750px;
+$menu-breakpoint-below: 749px;
 
 $first-color: hsl(20, 100%, 50%);
 $second-color: complement($first-color);
