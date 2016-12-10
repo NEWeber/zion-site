@@ -30,7 +30,7 @@ for( var counter = 0; counter < numSubmenus; counter++ ) {
                 currentDisplay.removeAttribute( 'id' );
             }
             currentElem.setAttribute( 'id', 'display');
-            currentElem.onmouseout = function () {
+            currentElem.onmouseleave = function () {
                 currentElem.removeAttribute( 'id' );
             }
         }
