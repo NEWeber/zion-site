@@ -8,6 +8,7 @@ var uglify         = require( 'gulp-uglify' );
 var notify         = require( 'gulp-notify' );
 var plumber        = require( 'gulp-plumber' );
 var browserSync    = require( 'browser-sync' );
+var autoprefixer   = require( 'gulp-autoprefixer' );
 
 function customerPlumber( errTitle ) {
     return plumber( {
@@ -42,6 +43,7 @@ gulp.task( 'sass', function( cb ) {
         gulp.src( './sass/**/*.scss'),
         customerPlumber( 'SASS Error' ),
         sass().on( 'error', sass.logError ),
+        autoprefixer(),
         gulp.dest( './target/css' ),
         browserSync.reload( {
             stream: true
