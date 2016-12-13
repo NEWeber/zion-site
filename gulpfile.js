@@ -9,6 +9,9 @@ var notify         = require( 'gulp-notify' );
 var plumber        = require( 'gulp-plumber' );
 var browserSync    = require( 'browser-sync' );
 var autoprefixer   = require( 'gulp-autoprefixer' );
+var rsync          = require( 'rsyncwrapper' );
+var fs             = require( 'fs' );
+var creds          = JSON.parse( fs.readFileSync( './secrets.json' ) );
 
 function customerPlumber( errTitle ) {
     return plumber( {
@@ -98,4 +101,13 @@ gulp.task( 'watch', [ 'default', 'browserSync' ], function() {
     gulp.watch( './sass/**/*.scss', [ 'sass' ] );
     gulp.watch( './js/*.js', [ 'compress' ] );
     gulp.watch( ['pages/**/*.nunjucks', 'templates/**/*.nunjucks'], [ 'nunjucks' ] );
+} );
+
+gulp.task( 'deploy', function() {
+    rsync( {
+        src: 'target/',
+        dest: creds.username,
+        ssh: true,
+        recursive: true,
+    } );
 } );
