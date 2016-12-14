@@ -27,7 +27,7 @@ function customerPlumber( errTitle ) {
 gulp.task( 'nunjucks', function( cb ) {
     pump( [
         //TODO: update when staff page is ready
-        gulp.src( ['pages/**/*.nunjucks', '!pages/staff.nunjucks' ] ),
+        gulp.src( [ 'pages/**/*.nunjucks', '!pages/staff.nunjucks' ] ),
         customerPlumber( 'Nunjucks Error' ),
         nunjucksRender( {
             path: [ 'templates' ]
@@ -103,11 +103,18 @@ gulp.task( 'watch', [ 'default', 'browserSync' ], function() {
     gulp.watch( ['pages/**/*.nunjucks', 'templates/**/*.nunjucks'], [ 'nunjucks' ] );
 } );
 
-gulp.task( 'deploy', function() {
+gulp.task( 'deploy', [ 'default' ], function() {
     rsync( {
         src: 'target/',
         dest: creds.username,
+        privateKey: creds.keyPath,
         ssh: true,
         recursive: true,
+    }, function ( error, stdout, stderr, cmd ) {
+        if ( error ) {
+            console.log( error.message );
+        } else {
+            console.log( 'Uploaded to site successfully' );
+        }
     } );
 } );
