@@ -9,6 +9,9 @@ var notify         = require( 'gulp-notify' );
 var plumber        = require( 'gulp-plumber' );
 var browserSync    = require( 'browser-sync' );
 var autoprefixer   = require( 'gulp-autoprefixer' );
+var rsync          = require( 'rsyncwrapper' );
+var fs             = require( 'fs' );
+var creds          = JSON.parse( fs.readFileSync( './secrets.json' ) );
 
 function customerPlumber( errTitle ) {
     return plumber( {
@@ -23,7 +26,8 @@ function customerPlumber( errTitle ) {
 //Compile nunjucks files, put in target
 gulp.task( 'nunjucks', function( cb ) {
     pump( [
-        gulp.src( 'pages/**/*.nunjucks' ),
+        //TODO: update when staff page is ready
+        gulp.src( [ 'pages/**/*.nunjucks', '!pages/staff.nunjucks' ] ),
         customerPlumber( 'Nunjucks Error' ),
         nunjucksRender( {
             path: [ 'templates' ]
@@ -40,7 +44,8 @@ gulp.task( 'nunjucks', function( cb ) {
 //Compile sass, put in target/css
 gulp.task( 'sass', function( cb ) {
     pump( [
-        gulp.src( './sass/**/*.scss'),
+        //TODO: update when staff page is ready
+        gulp.src( [ 'sass/**/*.scss', '!sass/styles-staff.scss' ] ),
         customerPlumber( 'SASS Error' ),
         sass().on( 'error', sass.logError ),
         autoprefixer(),
@@ -70,7 +75,8 @@ gulp.task( 'compress', function ( cb ) {
 // checkout https://github.com/sindresorhus/gulp-imagemin for images
 gulp.task( 'copy', function( cb ) {
     pump  ( [
-        gulp.src( './img/*' ),
+        //TODO: update exclusions when placeholder images are needed.
+        gulp.src( [ 'img/*', '!img/church.jpeg', '!img/pastor.jpeg', '!img/organist.jpeg', '!img/deacon.jpeg' ] ),
         customerPlumber( 'Copy Error' ),
         gulp.dest( './target/img' ),
         browserSync.reload( {
@@ -95,4 +101,20 @@ gulp.task( 'watch', [ 'default', 'browserSync' ], function() {
     gulp.watch( './sass/**/*.scss', [ 'sass' ] );
     gulp.watch( './js/*.js', [ 'compress' ] );
     gulp.watch( ['pages/**/*.nunjucks', 'templates/**/*.nunjucks'], [ 'nunjucks' ] );
+} );
+
+gulp.task( 'deploy', [ 'default' ], function() {
+    rsync( {
+        src: 'target/',
+        dest: creds.username,
+        privateKey: creds.keyPath,
+        ssh: true,
+        recursive: true,
+    }, function ( error, stdout, stderr, cmd ) {
+        if ( error ) {
+            console.log( error.message );
+        } else {
+            console.log( 'Uploaded to site successfully' );
+        }
+    } );
 } );
