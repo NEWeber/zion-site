@@ -236,3 +236,13 @@ h4.catechism-quesions{
         margin-bottom: 5px;
     }
 }
+
+.special-service-box {
+    h2 {
+        margin-top: 0;
+    }
+    max-width: 500px;
+    border: 1px solid $complementary-gray;
+    padding: 25px;
+    margin: 15px auto;
+}
