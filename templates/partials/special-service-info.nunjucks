@@ -1,0 +1,17 @@
+<div class="special-service-box">
+    {# TODO: make a h1 and apply class to make smaller #}
+    <h2>Chirstmas Service Times</h2>
+    <h3>December 24th</h3>
+    <ul>
+        <li>6:30 p.m. Christmas Eve Family Service</li>
+        <li>11:00 p.m.Christmas Eve Candlelight Service
+    </ul>
+    <h3>December 25th</h3>
+    <ul>
+        <li>10:30 a.m. Christmas Day Service</li>
+    </ul>
+    <h3>January 31st</h3>
+    <ul>
+        <li>7:00 p.m. New Year's Eve Worship</li>
+    </ul>
+</div>
