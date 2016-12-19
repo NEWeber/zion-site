@@ -45,6 +45,9 @@ a {
     border-radius: 10px;
     color: $black;
     font-family: $secondary-font;
+    @media screen and (max-width:630px) {
+        display: none;
+    }
 }
 
 .clearfix:after {
