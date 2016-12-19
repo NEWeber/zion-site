@@ -16,7 +16,7 @@
             <p>Advent midweek services are on Wednesdays at noon and 7:00 p.m. starting November 30th.</p>
             {% include "partials/special-service-info.nunjucks" %}
             <a href="./visiting.html" class="btn-container"><span class="btn btn-primary">Visit Zion</span></a>
-            <p>Questions? Contact us at 253-752-1264 or <a href="./contact.html">email us</a></p>
+            <p>Questions? Contact us at <a href="tel:253-752-1264">253-752-1264</a> or <a href="./contact.html">email us</a></p>
         </div>
         {# <div class="side-image">
             <img src="../../zion anniversary photos/holy trinity 004.jpg" />
