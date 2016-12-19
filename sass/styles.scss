@@ -62,6 +62,12 @@ a {
     content:'';
 }
 
+ul {
+    @media screen and (max-width:$menu-breakpoint-below) {
+        padding-left: 20px;
+    }
+}
+
 .content-wrapper {
     max-width: 1050px;
     height: 575px;
