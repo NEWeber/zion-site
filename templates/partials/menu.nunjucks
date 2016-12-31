@@ -40,7 +40,7 @@
             </li>
             {# <li><a href="./staff.html">Staff</a></li> #}
             <li class="icon">
-                <a href="javascript:void(0);" onclick="menuToggle()">&#9776;</a>
+                <a href="javascript:void(0);" onclick="menuToggle()">&#8801;</a>
             </li>
             {# TODO: Education? Other nav topics? #}
         </ul>
