@@ -4,11 +4,12 @@
     {% include "partials/header.nunjucks" %}
     {% include "partials/menu.nunjucks" %}
     <div class="content-wrapper">
-        <div class="map-wrapper">
-            {# TODO: Make map responsive, see http://www.labnol.org/internet/embed-responsive-google-maps/28333/ #}
-            <iframe width="500" height="400" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJPd_AAyJVkFQRQ3Cl8tEleNI&key=AIzaSyD5fzLwTcp050iv7tMmVcmq1aDpyqn83Tw" allowfullscreen></iframe>
+        <div class="directions-column">
+            <div class="map-wrapper">
+                <iframe width="500" height="400" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJPd_AAyJVkFQRQ3Cl8tEleNI&key=AIzaSyD5fzLwTcp050iv7tMmVcmq1aDpyqn83Tw" allowfullscreen></iframe>
+            </div>
         </div>
-        <div class="text-container directions-text clearfix">
+        <div class="text-container directions-column last-column">
             <h1>Visiting Zion</h1>
             <h3>Getting Here</h3>
             <p>See the map on this page or go <a href="./directions.html">here</a> for more detailed directions</p>
