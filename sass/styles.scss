@@ -234,6 +234,9 @@ h4.catechism-quesions{
 
 .last-column {
     margin-right: 0;
+    @media screen and (max-width:$menu-breakpoint-below) {
+        width: auto;
+    }
 }
 
 .map-wrapper {
