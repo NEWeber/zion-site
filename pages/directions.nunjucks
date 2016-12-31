@@ -4,11 +4,12 @@
     {% include "partials/header.nunjucks" %}
     {% include "partials/menu.nunjucks" %}
     <div class="content-wrapper">
-        <div class="map-wrapper">
-            <!-- TODO: Make map responsive, see http://www.labnol.org/internet/embed-responsive-google-maps/28333/ -->
-            <iframe width="500" height="400" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJPd_AAyJVkFQRQ3Cl8tEleNI&key=AIzaSyD5fzLwTcp050iv7tMmVcmq1aDpyqn83Tw" allowfullscreen></iframe>
+        <div class="directions-column">
+            <div class="map-wrapper">
+                <iframe width="600" height="450" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJPd_AAyJVkFQRQ3Cl8tEleNI&key=AIzaSyD5fzLwTcp050iv7tMmVcmq1aDpyqn83Tw" allowfullscreen></iframe>
+            </div>
         </div>
-        <div class="text-container directions-text clearfix">
+        <div class="text-container directions-column last-column">
             <h2>Getting to Zion</h2>
             <p>Zion is located at 3410 6th Ave, Tacoma, WA 98406</p>
             <p>We're one block east of Union Avenue.</p>

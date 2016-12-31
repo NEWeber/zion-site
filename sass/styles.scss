@@ -2,10 +2,11 @@
 @import "grid";
 
 body {
-    //background: #587272;
     background: $complementary-neutral;
-    //rgb(161, 201, 0);
-    padding: 25px;
+    padding: 10px;
+    @media screen and (min-width:400px) {
+        padding: 25px;
+    }
 }
 
 a {
@@ -30,10 +31,13 @@ a {
         margin: 0;
         font-weight: normal;
     }
+    @media screen and (max-width:630px) {
+        display: none;
+    }
 }
 
 
-.header-wrap h1 span {
+.header-wrap .lcms {
     font-size: 28px;
     font-weight: normal;
     font-family: $headline-font;
@@ -49,10 +53,29 @@ a {
     font-family: $secondary-font;
 }
 
+.small-breakpoint-hide {
+    @media screen and (max-width:630px) {
+        display: none;
+    }
+}
+
+.small-breakpoint-show {
+    display: none;
+    @media screen and (max-width:630px) {
+        display: inline;
+    }
+}
+
 .clearfix:after {
     display: block;
     clear: both;
     content:'';
+}
+
+ul {
+    @media screen and (max-width:$menu-breakpoint-below) {
+        padding-left: 20px;
+    }
 }
 
 .content-wrapper {
@@ -61,12 +84,11 @@ a {
     width: auto;
     display: block;
     position: relative;
-    // box-shadow: 0px -2px 2px hsl(200, 100%, 50%);
     color: $black;
     margin-left: auto;
     margin-right: auto;
     @media screen and (min-width:$menu-breakpoint-above) {
-        padding: 50px;
+        padding: 40px;
     }
 }
 
@@ -112,7 +134,10 @@ a {
 
 .text-container {
     background-color: rgba($white, 0.8);
-    padding: 1px 40px 1px 40px;
+    padding: 1px 40px;
+    @media screen and (max-width: 1180px ) {
+        padding: 1px 10px;
+    }
     //TODO: Make text bigger, make container narrower, starting with below.
     max-width:656px;
     margin-right: auto;
@@ -197,16 +222,36 @@ h4.catechism-quesions{
     font-style: italic;
 }
 
-.map-wrapper {
-    float: left;
-    margin-right: 20px;
-    margin-bottom: 20px;
+.directions-column {
+    float:left;
+    width:45%;
+    margin-right:2%;
+    @media screen and (max-width:$menu-breakpoint-below) {
+        width: 100%;
+        margin-bottom: 10px;
+    }
 }
 
-.directions-text {
-    float: left;
-    max-width: 450px;
-    min-width: 300px;
+.last-column {
+    margin-right: 0;
+    @media screen and (max-width:$menu-breakpoint-below) {
+        width: auto;
+    }
+}
+
+.map-wrapper {
+    position: relative;;
+    padding-bottom: 75%;
+    height: 0;
+    width:auto;
+    overflow: hidden;
+    iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100% !important;
+        height: 100% !important;
+    }
 }
 
 .contact-form {

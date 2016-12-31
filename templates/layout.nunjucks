@@ -15,8 +15,7 @@
         <meta name="apple-mobile-web-app-title" content="Zion Lutheran">
         <meta name="application-name" content="Zion Lutheran">
         <meta name="theme-color" content="#ffffff">
-        {#  TODO: Uncomment following line *ONLY* after the whole site is ready to be responsive #}
-        {# <meta name="viewport" content="width=device-width" /> #}
+        <meta name="viewport" content="width=device-width" />
     </head>
     <body>
         {% block content %} {% endblock %}
