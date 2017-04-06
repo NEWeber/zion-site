@@ -1,17 +1,23 @@
 <div class="special-service-box">
     {# TODO: make a h1 and apply class to make smaller #}
-    <h2>Ash Wednesday Services</h2>
-    <h3>March 1st</h3>
+    <h2>Holy Week Services</h2>
+    <h3>Maundy Thursday, April 13th</h3>
     <ul>
-        <li>12:00 p.m.</li>
-        <li>Lenten Supper at 5:30 p.m.</li>
         <li>7:00 p.m.</li>
     </ul>
-    <h2>Lenten Midweek Services</h2>
-    <h3>Wednesdays in Lent</h3>
+    <h3>Good Friday, April 14th</h3>
     <ul>
-        <li>12:00 p.m.</li>
-        <li>Lenten Supper at 5:30 p.m.</li>
+        <li>12:00 p.m. Chief Service</li>
+        <li>7:00 p.m. Tenebrae Vespers</li>
+    </ul>
+    <h3>Easter Vigil, Saturday, April 15th</h3>
+    <ul>
         <li>7:00 p.m.</li>
     </ul>
+    <h3>Easter Sunday, April 16th</h3>
+    <ul>
+        <li>7:00 a.m. Easter Sunday Dawn Morning Prayer</li>
+        <li>10:30 a.m. Easter Sunday Festival Divine Service</li>
+    </ul>
+
 </div>
