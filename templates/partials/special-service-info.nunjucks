@@ -1,0 +1,8 @@
+<div class="special-service-box">
+    {# TODO: make a h1 and apply class to make smaller #}
+    <h2>Ascension Day service</h2>
+    <h3>Thursday, May 25th</h3>
+    <ul>
+        <li>7:00 p.m.</li>
+    </ul>
+</div>
