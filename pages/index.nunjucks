@@ -4,7 +4,13 @@
     {% include "partials/menu.nunjucks" %}
     <div class="homepage content-wrapper">
         <div>
-            <img class="church-image" src="./img/zion-small-img.jpg" alt="Zion Evangelical Lutheran Church" />
+            <picture>
+                <source type="image/webp" srcset="./img/zion-small-img-webp.webp"/>
+                <source type="image/vnd.ms-photo" srcset="./img/zion-small-img-jxr.jxr"/>
+                <source type="image/jp2" srcset="./img/zion-small-img-jpeg2000.jp2"/>
+                <img class="church-image" src="./img/zion-small-img.jpg" 
+                    alt="Zion Evangelical Lutheran Church" />
+            </picture>
         </div>
         <div class="text-container">
             <p>
