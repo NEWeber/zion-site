@@ -1,0 +1,47 @@
+{% set pageTitle = "Visiting - Zion Lutheran" %}
+{% extends "layout.nunjucks" %}
+{% block content %}
+    {% include "partials/header.nunjucks" %}
+    {% include "partials/menu.nunjucks" %}
+    <p>
+    </p>
+    <div class="content-wrapper">
+        <div class="directions-column">
+            <div class="map-wrapper">
+                <iframe width="500" height="400" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJPd_AAyJVkFQRQ3Cl8tEleNI&key=AIzaSyD5fzLwTcp050iv7tMmVcmq1aDpyqn83Tw" allowfullscreen></iframe>
+            </div>
+        </div>
+        <div class="text-container directions-column last-column">
+            <h1>Visiting Zion</h1>
+            <h3>Getting Here</h3>
+            <p>See the map on this page or go <a href="./directions.html">here</a> for more detailed directions</p>
+            <h3>What to expect</h3>
+            <p>We're glad you're thinking about visting Zion!</p>
+            <p>
+                The service times are 8:00 and 10:30 on Sundays with Bible study
+                for all ages at 9:15.
+            </p>
+            <p>
+                The Divine Service follows the historic pattern of the church with
+                liturgical music and hymns from throughout the church's history.
+                The order of the service is printed in your bulletin to make it
+                easy to follow along. If you have questions about the service,
+                please ask.
+            </p>
+            <p>
+                We celebrate The Lord's Supper every Sunday. 
+                    <a href="./lords-supper.html">Click here</a>
+                    for more about this Sacrament of the Church.
+                    Visitors who are not members of an LCMS congregation should speak with the 
+                    pastor before communing with us:
+                    please arrive at least 15 minutes prior to the service to speak with the pastor
+                    or <a href="./contact.html">contact him</a> prior to your visit.
+            </p>
+            <p>
+                We desire to abide in the words of Jesus and Paul in Holy Scripture concerning 
+                    what it means to commune together, 
+                    and we desire to avoid deceiving anyone concerning this most 
+                    holy Sacrament and what we believe concerning our justification in Christ.
+            </p>
+    </div>
+{% endblock %}

@@ -18,6 +18,9 @@
                     {# <li><a href="#">What to Expect</a></li> #}
                 </ul>
             </li>
+            <li>
+                <a href="./calender.html">Calender</a>
+            </li>
             <li class="more">
                 <a href="#">Beliefs</a>
                 <ul class="sub-menu">
