@@ -6,12 +6,19 @@
     <div class="content-wrapper">
         <div class="text-container">
             <h1>Baptism</h1>
-            <a href="./believe.html">back<a/>
             <h2>What we believe about Baptism:</h2>
             <p>Holy Scripture teaches that Baptism is necessary for salvation (<a href="http://biblia.com/bible/nkjv/Mark%2016.16">Mark 16:16</a>) and that God's grace is offered through baptism (<a href="http://biblia.com/bible/nkjv/Titus%203.4-7">Titus 3:4-7</a>). Children should be baptized, as St. Peter clearly taught on the Day of Pentecost (<a href="http://biblia.com/bible/nkjv/Acts%202.38-39">Acts 2:38-39</a>). Throughout the book of Acts we read that whole households were baptized, and the witness of the earliest Christians is unanimous in the baptism of infants.</p>
             <p>If you are an adult and not baptized, our Pastor would likely take you through a small portion of <a href="./catechesis.html">catechesis</a> (instruction in the Christian faith) to prepare for baptism. <a href="./catechesis.html">Click here</a> to learn more about catechesis at Zion, or <a href="./contact.html">contact</a> our pastor through Zion’s office for more information. Members or those preparing for membership are encouraged to bring their children to the pastor as soon as possible to discuss arrangements for having them baptized.</p>
             {# <p>The article below by a 16th Century theologian expounds upon Scripture’s teaching on baptism in greater detail. The article was taken from <em><a href="http://www.studiumexcitare.com/content/59">Studium Excitare</a></em>.</p> #}
             <!-- TODO: Insert article here -->
+
+            <div>
+                <ul>
+                    <li><a href="./lords-supper.html">The Lord's Supper</a></li>
+                    <li><a href="./confession.html">Confession</a></li>
+                    <li><a href="./catechesis.html">Catechesis</a></li>
+                </ul>
+            </div>
         </div>
     </div>
 {% endblock %}

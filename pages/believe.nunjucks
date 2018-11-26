@@ -58,14 +58,16 @@
             </p>
 
             <p>
-            For more details on our specific practices during services please look through the following links
+            For more information on our congretations practices please look through the following links.
             </p>
-            <ul>
-                <li><a href="./holy-baptism.html">Holy Baptism</a></li>
-                <li><a href="./lords-supper.html">The Lord's Supper</a></li>
-                <li><a href="./confession.html">Confession</a></li>
-                <li><a href="./catechesis.html">Catechesis</a></li>
-            </ul>
+            <div>
+                <ul>
+                    <li><a href="./holy-baptism.html">Holy Baptism</a></li>
+                    <li><a href="./lords-supper.html">The Lord's Supper</a></li>
+                    <li><a href="./confession.html">Confession</a></li>
+                    <li><a href="./catechesis.html">Catechesis</a></li>
+                </ul>
+            </div>
         </div>
         
     </div>
