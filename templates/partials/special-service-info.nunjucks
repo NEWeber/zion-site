@@ -1,0 +1,8 @@
+<div class="special-service-box">
+    {# TODO: make a h1 and apply class to make smaller #}
+    <h2>Epiphany Service</h2>
+    <h3>January 6th</h3>
+    <ul>
+        <li>7:00 p.m. Feast of the Epiphany Service at <a href="http://poplakewood.org/">Prince of Peace Lutheran Church</a></li>
+    </ul>
+</div>
