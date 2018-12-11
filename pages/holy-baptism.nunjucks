@@ -12,13 +12,6 @@
             {# <p>The article below by a 16th Century theologian expounds upon Scripture’s teaching on baptism in greater detail. The article was taken from <em><a href="http://www.studiumexcitare.com/content/59">Studium Excitare</a></em>.</p> #}
             <!-- TODO: Insert article here -->
 
-            <div>
-                <ul>
-                    <li><a href="./lords-supper.html">The Lord's Supper</a></li>
-                    <li><a href="./confession.html">Confession</a></li>
-                    <li><a href="./catechesis.html">Catechesis</a></li>
-                </ul>
-            </div>
-        </div>
+          
     </div>
 {% endblock %}
