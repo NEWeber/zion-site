@@ -19,15 +19,8 @@
                     {# <li><a href="#">What to Expect</a></li> #}
                 </ul>
             </li>
-            <li class="more">
-                <a href="#">Beliefs</a>
-                <ul class="sub-menu">
-                    <li><a href="./believe.html">What We Believe</a></li>
-                    <li><a href="./holy-baptism.html">Holy Baptism</a></li>
-                    <li><a href="./lords-supper.html">The Lord's Supper</a></li>
-                    <li><a href="./confession.html">Confession</a></li>
-                    <li><a href="./catechesis.html">Catechesis</a></li>
-                </ul>
+            <li>
+                <a href="./calender.html">Calender</a>
             </li>
             <li class="more">
                 <a href="#">About Us</a>

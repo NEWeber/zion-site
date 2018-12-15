@@ -297,3 +297,21 @@ h4.catechism-quesions{
         padding: 25px;
     }
 }
+
+.calendar-container {
+    width: 800px;
+    display: block;
+    margin: 0 auto;
+    position: relative;
+    height: 0;
+    width: 78%;
+    padding-bottom: 58.5%;
+}
+  
+.calendar-container iframe{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
