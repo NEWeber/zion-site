@@ -315,3 +315,18 @@ h4.catechism-quesions{
     width: 100%;
     height: 100%;
   }
+
+@media screen and (max-width:$menu-breakpoint-below) {
+    .big-calendar {
+        display: none;
+    }
+    .agenda-container iframe {
+        height: 275%;
+    }
+}
+
+@media screen and (min-width:$menu-breakpoint-below) {
+    .agenda-container {
+        display: none;
+    }
+}
