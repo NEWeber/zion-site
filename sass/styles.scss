@@ -303,7 +303,7 @@ h4.catechism-quesions{
     display: block;
     margin: 0 auto;
     position: relative;
-    // height: 0;
+    height: 0;
     width: 78%;
     padding-bottom: 58.5%;
 }
@@ -319,6 +319,9 @@ h4.catechism-quesions{
 @media screen and (max-width:$menu-breakpoint-below) {
     .big-calendar {
         display: none;
+    }
+    .agenda-container iframe {
+        height: 128.5%;
     }
 }
 
