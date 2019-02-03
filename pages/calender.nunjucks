@@ -6,7 +6,7 @@
     <div class="content-wrapper">
         <div class="calendar-container">
             <div class="big-calendar">
-                <iframe src="https://calendar.google.com/calendar/embed?height=600&amp;wkst=1&amp;bgcolor=%233366ff&amp;src=ziontacoma%40gmail.com&amp;color=%231B887A&amp;ctz=America%2FLos_Angeles" style="border:solid 1px #777" width="800" height="600" frameborder="0" scrolling="yes"></iframe>s
+                <iframe src="https://calendar.google.com/calendar/embed?height=600&amp;wkst=1&amp;bgcolor=%233366ff&amp;src=ziontacoma%40gmail.com&amp;color=%231B887A&amp;ctz=America%2FLos_Angeles" style="border:solid 1px #777" width="800" height="600" frameborder="0" scrolling="yes"></iframe>
             </div>
             <div class="agenda-container">
                 <iframe src="https://calendar.google.com/calendar/b/1/embed?showCalendars=0&amp;mode=AGENDA&amp;height=600&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=be9quia2spo4ilb9dtkdq4nc9g%40group.calendar.google.com&amp;color=%236B3304&amp;ctz=America%2FLos_Angeles" style="border-width:0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
