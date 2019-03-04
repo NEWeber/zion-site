@@ -1,0 +1,43 @@
+{% set pageTitle = "Resources - Zion Lutheran" %}
+{% extends "layout.nunjucks" %}
+{% block content %}
+    {% include "partials/header.nunjucks" %}
+    {% include "partials/menu.nunjucks" %}
+    <div class="content-wrapper">
+        <div class="text-container">
+        <h1>Resources</h1>
+            <div class="resource-container">
+                <h2 class="resource-header"><a href="https://lcms.org">The Lutheran Church Missouri Synod (LCMS)</a></h2>
+                <img class="resource-img" src="./img/lcms-logo.jpg" alt="LCMS Logo: three blue crosses stacked">
+                <p class="resource-text">
+                    The LCMS is the organization that Zion belongs to. 
+                    Visit their site for more information about what Lutherans believe, 
+                    more about the synod and other resources.
+                </p>
+            </div>
+            <div class="resource-container">
+                <h2 class="resource-header"><a href="https://issuesetc.org">Issues Etc.</a></h2>
+                <img class="resource-img" src="./img/issues.jpg" alt="Issues Etc. logo: a radio microphone casting a shadow in the shape of a cross">
+                <p class="resource-text">
+                    Issues Etc. is a podcast and radio show hosted by a Lutheran pastor.
+                    He interviews pastors, academics, journalists and others about a variety of issues.
+                </p>
+            </div>
+            <div class="resource-container">
+                <h2 class="resource-header"><a href="https://lutheranpublicradio.org/">Lutheran Public Radio</a></h2>
+                <img class="resource-img" src="./img/lutheran-public.jpeg" alt="Lutheran Public Radio logo: a box with the letters L, P and R on it.">
+                <p class="resource-text">
+                    LPR is a sacred music station that broadcasts church music appropiate for the current liturgical season.
+                </p>
+            </div>
+            <div class="resource-container">
+                <h2 class="resource-header"><a href="https://www.lhm.org">Lutheran Hour Ministries</a></h2>
+                {# TODO: replace image with LCMS logo after we recieve approval to use it. #}
+                <img class="resource-img" src="./img/lhm.jpg" alt="Lutheran Hour Ministries logo: a cross divided into four people with their hands up.">
+                <p class="resource-text">
+                    Lutheran Hour Ministries is a multimedia group that broadcasts the Lutheran Hour, a radio program and develops other resources for church use.
+                </p>
+            </div>
+        </div>
+    </div>
+    {% endblock %}
