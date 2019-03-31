@@ -16,6 +16,14 @@
                 </p>
             </div>
             <div class="resource-container">
+                <h2 class="resource-header"><a href="https://cph.org">Concordia Publishing House</a></h2>
+                <img class="resource-img" src="./img/cph-logo.jpg" alt="CPH Logo: open Bible with a torch">
+                <p class="resource-text">
+                    Concordia Publishing House (CPH) is the publisher for the LCMS. 
+                    Visit their site for books, devotional resources, music and more.
+                </p>
+            </div>
+            <div class="resource-container">
                 <h2 class="resource-header"><a href="https://issuesetc.org">Issues Etc.</a></h2>
                 <img class="resource-img" src="./img/issues.jpg" alt="Issues Etc. logo: a radio microphone casting a shadow in the shape of a cross">
                 <p class="resource-text">
