@@ -132,6 +132,75 @@ ul {
     max-width: 100%;
 }
 
+.resource-container {
+    background-color: rgba($white, 0.8);
+    padding: 1em;
+    display: grid;
+    margin-bottom: 1em;
+    //mobile
+    @media screen and (max-width:$menu-breakpoint-below) {
+        grid-template-columns: auto;
+        grid-template-rows: auto 1em auto 1em auto;
+    }
+    //desktop
+    @media screen and (min-width:$menu-breakpoint-above) {
+        grid-template-columns: 13em 2em auto;
+        grid-template-rows: auto 1em auto;
+    }
+    .resource-header {
+        margin-top: 0;
+        //mobile
+        @media screen and (max-width:$menu-breakpoint-below) {
+            grid-column-start: 1;
+            grid-column-end: 1;
+            grid-row-start: 1;
+            grid-row-end: 2;
+        }
+        //desktop
+        @media screen and (min-width:$menu-breakpoint-above) {
+            grid-column-start: 3;
+            grid-column-end: 3;
+            grid-row-start: 1;
+            grid-row-end: 2;
+        }
+    }
+    .resource-img {
+        height: 12em;
+        width: auto;
+        //mobile
+        // TODO: center img on mobile
+        @media screen and (max-width:$menu-breakpoint-below) {
+            grid-column-start: 1;
+            grid-column-end: 1;
+            grid-row-start: 3;
+            grid-row-end: 4;
+        }
+        //desktop
+        @media screen and (min-width:$menu-breakpoint-above) {
+            grid-column-start: 1;
+            grid-column-end: 2;
+            grid-row-start: 1;
+            grid-row-end: 4;
+        }
+    }
+    .resource-text {
+        //mobile
+        @media screen and (max-width:$menu-breakpoint-below) {
+            grid-column-start: 1;
+            grid-column-end: 1;
+            grid-row-start: 5;
+            grid-row-end: 6;
+        }
+        @media screen and (min-width:$menu-breakpoint-above) {
+            margin-top: 0;
+            grid-column-start: 3;
+            grid-column-end: 3;
+            grid-row-start: 3;
+            grid-row-end: 4;
+        }
+    }
+}
+
 .text-container {
     background-color: rgba($white, 0.8);
     padding: 1px 40px;
