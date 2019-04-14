@@ -21,12 +21,18 @@
             <p>Our service times on Sunday are 8:00 and 10:30 with Bible Study for all ages at 9:15.</p>
             <a href="./visiting.html" class="btn-container"><span class="btn btn-primary">Visit Zion</span></a>
             <p>Questions? Contact us at <a href="tel:253-752-1264">253-752-1264</a> or <a href="./contact.html">email us</a></p>
+            <div class="facebook-link">
+               <a target="_blank" title="follow me on facebook" href="https://www.facebook.com/zionlutherantacomawa/">
+                <img alt="follow me on facebook" src="https://c866088.ssl.cf3.rackcdn.com/assets/facebook40x40.png" border=0>
+                </a>
+            </div>
         </div>
+
+    </div>
         {# <div class="side-image">
             <img src="../../zion anniversary photos/holy trinity 004.jpg" />
         </div>
         <div class="side-image side-image-2">
             <img src="../../zion anniversary photos/vespers service 010.jpg" />
         </div> #}
-    </div>
 {% endblock %}
