@@ -16,11 +16,11 @@
                 </p>
             </div>
             <div class="resource-container">
-                <h2 class="resource-header"><a href="https://cph.org">Concordia Publishing House</a></h2>
-                <img class="resource-img" src="./img/cph-logo.jpg" alt="CPH Logo: open Bible with a torch">
+                <h2 class="resource-header"><a href="https://www.lhm.org">Lutheran Hour Ministries</a></h2>
+                <img class="resource-img" src="./img/lhm.jpg" alt="Lutheran Hour Ministries logo: a cross divided into four people with their hands up.">
                 <p class="resource-text">
-                    Concordia Publishing House (CPH) is the publisher for the LCMS. 
-                    Visit their site for books, devotional resources, music and more.
+                    Lutheran Hour Ministries is a multimedia group that broadcasts the Lutheran Hour, 
+                    a radio program and develops other resources for church use.
                 </p>
             </div>
             <div class="resource-container">
@@ -39,11 +39,11 @@
                 </p>
             </div>
             <div class="resource-container">
-                <h2 class="resource-header"><a href="https://www.lhm.org">Lutheran Hour Ministries</a></h2>
-                {# TODO: replace image with LCMS logo after we recieve approval to use it. #}
-                <img class="resource-img" src="./img/lhm.jpg" alt="Lutheran Hour Ministries logo: a cross divided into four people with their hands up.">
+                <h2 class="resource-header"><a href="https://cph.org">Concordia Publishing House</a></h2>
+                <img class="resource-img" src="./img/cph-logo.jpg" alt="CPH Logo: open Bible with a torch">
                 <p class="resource-text">
-                    Lutheran Hour Ministries is a multimedia group that broadcasts the Lutheran Hour, a radio program and develops other resources for church use.
+                    Concordia Publishing House (CPH) is the publisher for the LCMS. 
+                    Visit their site for books, devotional resources, music and more.
                 </p>
             </div>
         </div>

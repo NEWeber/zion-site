@@ -28,9 +28,10 @@
                     <li><a href="./believe.html">What We Believe</a></li>
                     <li><a href="./more-about.html">More About Us</a></li>
                     <li><a href="./membership.html">Membership at Zion</a></li>
-                    <li><a href="./resources.html">Lutheran Resources</a></li>
                 </ul>
             </li>
+            <li><a href="./resources.html">Resources</a></li>
+
             {# <li><a href="./staff.html">Staff</a></li> #}
             <li class="icon">
                 <a href="javascript:void(0);" onclick="menuToggle()">&#8801;</a>
