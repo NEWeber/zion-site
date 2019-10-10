@@ -1,0 +1,13 @@
+{% set pageTitle = "About Zion- Zion Lutheran" %}
+{% extends "layout.nunjucks" %}
+{% block content %}
+    {% include "partials/header.nunjucks" %}
+    {% include "partials/menu.nunjucks" %}
+    <div class="content-wrapper">
+        <div class="text-container">
+            <h1>Sermons</h1>
+            <p>Check out recent sermons from Zion below:</p>
+            <script src="https://www.buzzsprout.com/658495.js?player=large" type="text/javascript" charset="utf-8"></script>
+        </div>
+    </div>
+{% endblock %}
