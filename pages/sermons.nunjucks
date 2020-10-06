@@ -5,7 +5,7 @@
     {% include "partials/menu.nunjucks" %}
     <div class="content-wrapper">
         <div class="text-container">
-            <h1>Sermons</h1>
+            <h1>Watch our service</h1>
             <p>Check out recent services from Zion:</p>
             <iframe src="https://ZionTacoma.sermon.net/embed" scrolling="no" frameborder="0" style="max-width:100%;width:1100px;min-height:255px;overflow:hidden;" allowTransparency="true" allowfullscreen class="sermon-iframe"></iframe><script src="https://ZionTacoma.sermon.net/static/common/js/iframe-resizer/iframeResizer.js"></script><script src="https://ZionTacoma.sermon.net/ICampus/js/embeddedPlayerHelper.js"></script>
             <style type="text/css">.sermon-iframe:-webkit-full-screen {min-width: 0 !important; max-width: none !important; width: 100% !important; min-height: 0 !important; max-height: none !important;}</style>
