@@ -34,81 +34,85 @@
             transition: 0.3s;
             font-size: 19px;
         }
+        .watch {
+            background-color: $primary-neutral-light;
+            color: $complementary-neutral-dark;
+        }
     }
-.icon {
-    display: none;
-}
-
-ul .service-times {
-    text-decoration:none;
-    color: $white;
-    padding:10px 40px;
-    display:inline-block;
-    font-size: 100%;
-}
-
-.menu a {
-    padding: 10px 30px;
-    display: inline-block;
-    text-shadow: 0 1px 0 rgba($black, 0.4);
-    font-size: 19px;
-}
-
-.menu > ul > li {
-    float: left;
-    display: inline-block;
-    position: relative;
-    font-size: 19px;
-}
-
-.sub-menu {
-    padding: 5px 0;
-    position: absolute;
-    z-index:-1;
-    opacity: 0;
-    transition: opacity linear 0.15s;
-    background: $complementary-neutral-dark;
-    display: none;
-    @media screen and (min-width:$menu-breakpoint-above) {
-        box-shadow: 0 2px 3px rgba(0,0,0,0.4);
+    .icon {
+        display: none;
     }
-    @media screen and (max-width:$menu-breakpoint-below) {
-        width: 100%;
+
+    ul .service-times {
+        text-decoration:none;
+        color: $white;
+        padding:10px 40px;
+        display:inline-block;
+        font-size: 100%;
     }
-}
 
-.service-times p {
-    padding: 0 15px
-}
-
-li:hover .sub-menu,
-#display > .sub-menu {
-    z-index: 1;
-    opacity: 1;
-    display: table;
-    @media screen and (max-width:$menu-breakpoint-below) {
-        position: inherit;
+    .menu a {
+        padding: 10px 30px;
+        display: inline-block;
+        text-shadow: 0 1px 0 rgba($black, 0.4);
+        font-size: 19px;
     }
-}
 
-.sub-menu li {
-    display: block;
-    font-size: 16px;
-}
+    .menu > ul > li {
+        float: left;
+        display: inline-block;
+        position: relative;
+        font-size: 19px;
+    }
 
-.sub-menu li a {
-    padding: 10px 30px;
-    display: block;
-}
+    .sub-menu {
+        padding: 5px 0;
+        position: absolute;
+        z-index:-1;
+        opacity: 0;
+        transition: opacity linear 0.15s;
+        background: $complementary-neutral-dark;
+        display: none;
+        @media screen and (min-width:$menu-breakpoint-above) {
+            box-shadow: 0 2px 3px rgba(0,0,0,0.4);
+        }
+        @media screen and (max-width:$menu-breakpoint-below) {
+            width: 100%;
+        }
+    }
 
-.service-times {
-    text-align: left;
-    text-decoration:none;
-    color: $white;
-    padding:10px 40px;
-    display:inline-block;
-    font-size: 100%;
-}
+    .service-times p {
+        padding: 0 15px
+    }
+
+    li:hover .sub-menu,
+    #display > .sub-menu {
+        z-index: 1;
+        opacity: 1;
+        display: table;
+        @media screen and (max-width:$menu-breakpoint-below) {
+            position: inherit;
+        }
+    }
+
+    .sub-menu li {
+        display: block;
+        font-size: 16px;
+    }
+
+    .sub-menu li a {
+        padding: 10px 30px;
+        display: block;
+    }
+
+    .service-times {
+        text-align: left;
+        text-decoration:none;
+        color: $white;
+        padding:10px 40px;
+        display:inline-block;
+        font-size: 100%;
+    }
 
     .more > a::after {
         @media screen and (min-width:$menu-breakpoint-above) {

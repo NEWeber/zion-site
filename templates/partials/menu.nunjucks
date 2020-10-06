@@ -26,12 +26,12 @@
                 <ul class="sub-menu">
                     <li><a href="./about-us.html">About Zion</a></li>
                     <li><a href="./believe.html">What We Believe</a></li>
-                    <li><a href="./sermons.html">Sermons</a></li>
                     <li><a href="./more-about.html">More About Us</a></li>
                     <li><a href="./membership.html">Membership at Zion</a></li>
                 </ul>
             </li>
             <li><a href="./resources.html">Resources</a></li>
+            <li><a class="watch" href="./sermons.html">Watch</a></li>
 
             {# <li><a href="./staff.html">Staff</a></li> #}
             <li class="icon">

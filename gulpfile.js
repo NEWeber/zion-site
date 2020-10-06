@@ -11,7 +11,7 @@ var browserSync    = require( 'browser-sync' );
 var autoprefixer   = require( 'gulp-autoprefixer' );
 var rsync          = require( 'rsyncwrapper' );
 var fs             = require( 'fs' );
-var creds          = JSON.parse( fs.readFileSync( './secrets.json' ) );
+// var creds          = JSON.parse( fs.readFileSync( './secrets.json' ) );
 
 function customerPlumber( errTitle ) {
     return plumber( {
@@ -39,6 +39,7 @@ gulp.task( 'nunjucks', function( cb ) {
     ],
     cb
     );
+    cb();
 } );
 
 //Compile sass, put in target/css
@@ -56,6 +57,7 @@ gulp.task( 'sass', function( cb ) {
     ],
     cb
     );
+    cb();
 } );
 
 gulp.task( 'compress', function ( cb ) {
@@ -70,6 +72,7 @@ gulp.task( 'compress', function ( cb ) {
     ],
     cb
     );
+    cb();
 } );
 
 // checkout https://github.com/sindresorhus/gulp-imagemin for images
@@ -85,9 +88,10 @@ gulp.task( 'copy', function( cb ) {
     ],
     cb
     );
+    cb();
 } );
 
-gulp.task( 'default', [ 'nunjucks', 'sass', 'compress', 'copy' ] );
+gulp.task('default', gulp.series('nunjucks', 'sass', 'compress', 'copy'));
 
 gulp.task( 'browserSync', function() {
     browserSync( {
@@ -97,13 +101,14 @@ gulp.task( 'browserSync', function() {
     } );
 } );
 
-gulp.task( 'watch', [ 'default', 'browserSync' ], function() {
-    gulp.watch( './sass/**/*.scss', [ 'sass' ] );
-    gulp.watch( './js/*.js', [ 'compress' ] );
-    gulp.watch( ['pages/**/*.nunjucks', 'templates/**/*.nunjucks'], [ 'nunjucks' ] );
-} );
+// FIXME: watch broke after Gulp 4 update
+gulp.task( 'watch', gulp.series('default', 'browserSync' , function() {
+    gulp.watch( './sass/**/*.scss', sass );
+    gulp.watch( './js/*.js', compress );
+    gulp.watch( ['pages/**/*.nunjucks', 'templates/**/*.nunjucks'], nunjucks );
+}));
 
-gulp.task( 'deploy', [ 'default' ], function() {
+gulp.task( 'deploy', gulp.series('default', function() {
     rsync( {
         src: 'target/',
         dest: creds.username,
@@ -117,4 +122,4 @@ gulp.task( 'deploy', [ 'default' ], function() {
             console.log( 'Uploaded to site successfully' );
         }
     } );
-} );
+}) );

@@ -4,20 +4,20 @@
   "description": "Zion Lutheran's Website",
   "main": "js/main.js",
   "dependencies": {
-    "del": "^2.2.2",
-    "gulp": "^3.9.1",
-    "gulp-nunjucks-render": "^2.0.0",
-    "gulp-sass": "^4.0.1",
-    "gulp-uglify": "^2.0.0",
-    "node-sass": "^4.9.3",
-    "pump": "^1.0.1"
+    "del": "^6.0.0",
+    "gulp": "^4.0.2",
+    "gulp-nunjucks-render": "^2.2.3",
+    "gulp-sass": "^4.1.0",
+    "gulp-uglify": "^3.0.2",
+    "node-sass": "^4.14.1",
+    "pump": "^3.0.0"
   },
   "devDependencies": {
-    "browser-sync": "^2.18.2",
-    "gulp-autoprefixer": "^3.1.1",
-    "gulp-notify": "^2.2.0",
-    "gulp-plumber": "^1.1.0",
-    "rsyncwrapper": "^2.0.1"
+    "browser-sync": "^2.26.12",
+    "gulp-autoprefixer": "^7.0.1",
+    "gulp-notify": "^3.2.0",
+    "gulp-plumber": "^1.2.1",
+    "rsyncwrapper": "^3.0.1"
   },
   "scripts": {
     "test": "mocha"
