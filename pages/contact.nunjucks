@@ -6,7 +6,7 @@
     <div class="content-wrapper">
         <div class="text-container">
             <h2>Contact Zion</h2>
-            <form class="contact-form" action="https://formspree.io/ziontacoma@nventure.com" method="POST">
+            <form class="contact-form" action="https://formspree.io/f/mpzkdkwa" method="POST">
                 <label for="name">Your Name</label>
                 <input id="name" type="text" name="name">
                 <label for="email">Your Email</label>
