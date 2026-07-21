@@ -6,7 +6,15 @@
     <div class="content-wrapper">
         <div class="directions-column">
             <div class="map-wrapper">
-                <iframe width="600" height="450" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJPd_AAyJVkFQRQ3Cl8tEleNI&key=AIzaSyD5fzLwTcp050iv7tMmVcmq1aDpyqn83Tw" allowfullscreen></iframe>
+                <iframe
+                    src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJPd_AAyJVkFQRQ3Cl8tEleNI&key=AIzaSyD5fzLwTcp050iv7tMmVcmq1aDpyqn83Tw"
+                    allowfullscreen=""
+                    width="600"
+                    height="450"
+                    frameborder="0"
+                    style="border:0"
+                    loading="lazy"
+                    referrerpolicy="strict-origin-when-cross-origin"></iframe>
             </div>
         </div>
         <div class="text-container directions-column last-column">
