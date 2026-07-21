@@ -1,125 +1,115 @@
-var gulp           = require( 'gulp' );
-var pump           = require( 'pump' );
-//TODO: remove del if it's not needed later
-var del            = require( 'del' );
-var nunjucksRender = require( 'gulp-nunjucks-render' );
-var sass           = require( 'gulp-sass' );
-var uglify         = require( 'gulp-uglify' );
-var notify         = require( 'gulp-notify' );
-var plumber        = require( 'gulp-plumber' );
-var browserSync    = require( 'browser-sync' );
-var autoprefixer   = require( 'gulp-autoprefixer' );
-var rsync          = require( 'rsyncwrapper' );
-var fs             = require( 'fs' );
-// var creds          = JSON.parse( fs.readFileSync( './secrets.json' ) );
+const gulp = require('gulp');
+const nunjucksRender = require('gulp-nunjucks-render');
 
-function customerPlumber( errTitle ) {
-    return plumber( {
-        errorHandler: notify.onError( {
-            title: errTitle || "Error running Gulp",
-            message: "Error: <%= error.message %>",
+const gulpSass = require('gulp-sass');
+const dartSass = require('sass');
+const sassCompiler = gulpSass(dartSass);
+
+const uglify = require('gulp-uglify');
+const notify = require('gulp-notify');
+const plumber = require('gulp-plumber');
+const browserSync = require('browser-sync').create();
+const autoprefixer = require('gulp-autoprefixer');
+const rsync = require('rsyncwrapper');
+const fs = require('fs');
+
+function customPlumber(errTitle) {
+    return plumber({
+        errorHandler: notify.onError({
+            title: errTitle || 'Error running Gulp',
+            message: 'Error: <%= error.message %>',
             sound: 'Glass'
-        } )
-    } );
+        })
+    });
 }
 
-//Compile nunjucks files, put in target
-gulp.task( 'nunjucks', function( cb ) {
-    pump( [
-        //TODO: update when staff page is ready
-        gulp.src( [ 'pages/**/*.nunjucks', '!pages/staff.nunjucks' ] ),
-        customerPlumber( 'Nunjucks Error' ),
-        nunjucksRender( {
-            path: [ 'templates' ]
-        } ),
-        gulp.dest( 'target' ),
-        browserSync.reload( {
-            stream: true
-        } )
-    ],
-    cb
-    );
-    cb();
-} );
+// Compile nunjucks files, put in target
+function nunjucks() {
+    return gulp.src(['pages/**/*.nunjucks', '!pages/staff.nunjucks'])
+        .pipe(customPlumber('Nunjucks Error'))
+        .pipe(nunjucksRender({
+            path: ['templates']
+        }))
+        .pipe(gulp.dest('target'))
+        .pipe(browserSync.stream());
+}
 
-//Compile sass, put in target/css
-gulp.task( 'sass', function( cb ) {
-    pump( [
-        //TODO: update when staff page is ready
-        gulp.src( [ 'sass/**/*.scss', '!sass/styles-staff.scss' ] ),
-        customerPlumber( 'SASS Error' ),
-        sass().on( 'error', sass.logError ),
-        autoprefixer(),
-        gulp.dest( './target/css' ),
-        browserSync.reload( {
-            stream: true
-        } )
-    ],
-    cb
-    );
-    cb();
-} );
+// Compile sass, put in target/css
+function styles() {
+    return gulp.src(['sass/**/*.scss', '!sass/styles-staff.scss'])
+        .pipe(customPlumber('SASS Error'))
+        .pipe(sassCompiler().on('error', sassCompiler.logError))
+        .pipe(autoprefixer())
+        .pipe(gulp.dest('./target/css'))
+        .pipe(browserSync.stream());
+}
 
-gulp.task( 'compress', function ( cb ) {
-    pump( [
-        gulp.src( './js/*.js' ),
-        customerPlumber( 'JS Error' ),
-        uglify(),
-        gulp.dest( './target/js' ),
-        browserSync.reload( {
-            stream: true
-        } )
-    ],
-    cb
-    );
-    cb();
-} );
+function compress() {
+    return gulp.src('./js/*.js')
+        .pipe(customPlumber('JS Error'))
+        .pipe(uglify())
+        .pipe(gulp.dest('./target/js'))
+        .pipe(browserSync.stream());
+}
 
-// checkout https://github.com/sindresorhus/gulp-imagemin for images
-gulp.task( 'copy', function( cb ) {
-    pump  ( [
-        //TODO: update exclusions when placeholder images are needed.
-        gulp.src( [ 'img/*', '!img/church.jpeg', '!img/pastor.jpeg', '!img/organist.jpeg', '!img/deacon.jpeg' ] ),
-        customerPlumber( 'Copy Error' ),
-        gulp.dest( './target/img' ),
-        browserSync.reload( {
-            stream: true
-        } )
-    ],
-    cb
-    );
-    cb();
-} );
+// Copy images
+function copy() {
+    return gulp.src([
+        'img/*',
+        '!img/church.jpeg',
+        '!img/pastor.jpeg',
+        '!img/organist.jpeg',
+        '!img/deacon.jpeg'
+    ])
+        .pipe(customPlumber('Copy Error'))
+        .pipe(gulp.dest('./target/img'))
+        .pipe(browserSync.stream());
+}
 
-gulp.task('default', gulp.series('nunjucks', 'sass', 'compress', 'copy'));
+const build = gulp.series(nunjucks, styles, compress, copy);
 
-gulp.task( 'browserSync', function() {
-    browserSync( {
+function serve(done) {
+    browserSync.init({
         server: {
             baseDir: 'target'
         }
-    } );
-} );
+    });
 
-// FIXME: watch broke after Gulp 4 update
-gulp.task( 'watch', gulp.series('default', 'browserSync' , function() {
-    gulp.watch( './sass/**/*.scss', sass );
-    gulp.watch( './js/*.js', compress );
-    gulp.watch( ['pages/**/*.nunjucks', 'templates/**/*.nunjucks'], nunjucks );
-}));
+    done();
+}
 
-gulp.task( 'deploy', gulp.series('default', function() {
-    rsync( {
+function watchFiles() {
+    gulp.watch('./sass/**/*.scss', styles);
+    gulp.watch('./js/*.js', compress);
+    gulp.watch(['pages/**/*.nunjucks', 'templates/**/*.nunjucks'], nunjucks);
+}
+
+function deploySite(done) {
+    const creds = JSON.parse(fs.readFileSync('./secrets.json'));
+
+    rsync({
         src: 'target/',
         dest: creds.username,
         privateKey: creds.keyPath,
         ssh: true,
-        recursive: true,
-    }, function ( error, stdout, stderr, cmd ) {
-        if ( error ) {
-            console.log( error.message );
-        } else {
-            console.log( 'Uploaded to site successfully' );
+        recursive: true
+    }, function (error) {
+        if (error) {
+            console.log(error.message);
+            done(error);
+            return;
         }
-    } );
-}) );
+
+        console.log('Uploaded to site successfully');
+        done();
+    });
+}
+
+exports.nunjucks = nunjucks;
+exports.sass = styles;
+exports.compress = compress;
+exports.copy = copy;
+exports.default = build;
+exports.watch = gulp.series(build, serve, watchFiles);
+exports.deploy = gulp.series(build, deploySite);
+
