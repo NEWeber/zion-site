@@ -8,31 +8,33 @@
                 <source type="image/webp" srcset="./img/zion-small-img-webp.webp"/>
                 <source type="image/vnd.ms-photo" srcset="./img/zion-small-img-jxr.jxr"/>
                 <source type="image/jp2" srcset="./img/zion-small-jpeg2000.jp2"/>
-                <img class="church-image" src="./img/zion-small-img.jpg" 
-                    alt="Zion Evangelical Lutheran Church" />
+                <img class="church-image" src="./img/zion-small-img.jpg" alt="Zion Evangelical Lutheran Church"/>
             </picture>
         </div>
         <div class="text-container">
             <p>
-                Welcome to Zion Lutheran, a congregation of the Lutheran Church
-                Missouri Synod (LCMS) in Tacoma.
+                Welcome to Zion Lutheran, a congregation of the Lutheran Church Missouri Synod (LCMS) in
+                Tacoma.
             </p>
             <p>We're located at 3410 6th Ave, Tacoma, WA, 98406 one block east of Union Avenue.</p>
             <p>Our service times on Sunday are 8:00 and 10:30 with Bible Study for all ages at 9:15.</p>
-            <a href="./visiting.html" class="btn-container"><span class="btn btn-primary">Visit Zion</span></a>
-            <p>Questions? Contact us at <a href="tel:253-752-1264">253-752-1264</a> or <a href="./contact.html">email us</a></p>
+            <a href="./visiting.html" class="btn-container">
+                <span class="btn btn-primary">Visit Zion</span>
+            </a>
+            <p>Questions? Contact us at
+                <a href="tel:253-752-1264">253-752-1264</a>
+                or
+                <a href="./contact.html">email us</a>
+            </p>
             <div class="facebook-link">
-               <a target="_blank" title="follow me on facebook" href="https://www.facebook.com/zionlutherantacomawa/">
-                <img alt="follow me on facebook" src="https://c866088.ssl.cf3.rackcdn.com/assets/facebook40x40.png" border=0>
-                </a>
+                <a target="_blank" title="follow me on facebook" href="https://www.facebook.com/zionlutherantacomawa/">
+                    <img alt="Follow Zion Lutheran on Facebook" src="./img/facebook-logo-primary.png" width="40" height="40"></div>
+                </div>
             </div>
-        </div>
-
-    </div>
-        {# <div class="side-image">
-            <img src="../../zion anniversary photos/holy trinity 004.jpg" />
-        </div>
-        <div class="side-image side-image-2">
-            <img src="../../zion anniversary photos/vespers service 010.jpg" />
-        </div> #}
-{% endblock %}
+            {# <div class="side-image">
+                        <img src="../../zion anniversary photos/holy trinity 004.jpg" />
+                    </div>
+                    <div class="side-image side-image-2">
+                        <img src="../../zion anniversary photos/vespers service 010.jpg" />
+                    </div> #}
+        {% endblock %}
