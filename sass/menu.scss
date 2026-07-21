@@ -1,4 +1,4 @@
-@import "variables";
+@use "variables" as *;
 
 .menu {
     //TODO: Implement Some sort of max-width for menu
@@ -19,9 +19,11 @@
         @media screen and (min-width:$menu-breakpoint-above) {
             display: inline-block;
         }
+
         @media screen and (max-width:$menu-breakpoint-below) {
             float: left;
         }
+
         font-family: $headline-font;
         font-size: 19px;
 
@@ -34,20 +36,22 @@
             transition: 0.3s;
             font-size: 19px;
         }
+
         .watch {
             background-color: $primary-neutral-light;
             color: $complementary-neutral-dark;
         }
     }
+
     .icon {
         display: none;
     }
 
     ul .service-times {
-        text-decoration:none;
+        text-decoration: none;
         color: $white;
-        padding:10px 40px;
-        display:inline-block;
+        padding: 10px 40px;
+        display: inline-block;
         font-size: 100%;
     }
 
@@ -58,7 +62,7 @@
         font-size: 19px;
     }
 
-    .menu > ul > li {
+    .menu>ul>li {
         float: left;
         display: inline-block;
         position: relative;
@@ -68,14 +72,16 @@
     .sub-menu {
         padding: 5px 0;
         position: absolute;
-        z-index:-1;
+        z-index: -1;
         opacity: 0;
         transition: opacity linear 0.15s;
         background: $complementary-neutral-dark;
         display: none;
+
         @media screen and (min-width:$menu-breakpoint-above) {
-            box-shadow: 0 2px 3px rgba(0,0,0,0.4);
+            box-shadow: 0 2px 3px rgba(0, 0, 0, 0.4);
         }
+
         @media screen and (max-width:$menu-breakpoint-below) {
             width: 100%;
         }
@@ -86,10 +92,11 @@
     }
 
     li:hover .sub-menu,
-    #display > .sub-menu {
+    #display>.sub-menu {
         z-index: 1;
         opacity: 1;
         display: table;
+
         @media screen and (max-width:$menu-breakpoint-below) {
             position: inherit;
         }
@@ -107,14 +114,14 @@
 
     .service-times {
         text-align: left;
-        text-decoration:none;
+        text-decoration: none;
         color: $white;
-        padding:10px 40px;
-        display:inline-block;
+        padding: 10px 40px;
+        display: inline-block;
         font-size: 100%;
     }
 
-    .more > a::after {
+    .more>a::after {
         @media screen and (min-width:$menu-breakpoint-above) {
             position: relative;
             left: 6px;
@@ -133,27 +140,35 @@
 
 // When the screen is less than 850 pixels wide, hide all list items, except for the first one ("Home"). Show the list item that contains the link to open and close the topnav (li.icon)
 @media screen and (max-width:$menu-breakpoint-below) {
-  ul.topnav li:not(:first-child) {display: none;}
-  ul.topnav li.icon {
-    float: right;
-    display: inline-block;
-  }
+    ul.topnav li:not(:first-child) {
+        display: none;
+    }
+
+    ul.topnav li.icon {
+        float: right;
+        display: inline-block;
+    }
 }
 
 // The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens
 @media screen and (max-width:$menu-breakpoint-below) {
-  ul.topnav.responsive {position: relative;}
-  ul.topnav.responsive li.icon {
-    position: absolute;
-    right: 0;
-    top: 0;
-  }
-  ul.topnav.responsive li {
-    float: none;
-    display: inline;
-  }
-  ul.topnav.responsive li a {
-    display: block;
-    text-align: left;
-  }
+    ul.topnav.responsive {
+        position: relative;
+    }
+
+    ul.topnav.responsive li.icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+
+    ul.topnav.responsive li {
+        float: none;
+        display: inline;
+    }
+
+    ul.topnav.responsive li a {
+        display: block;
+        text-align: left;
+    }
 }
